@@ -55,7 +55,7 @@ export function Footer() {
 
         <div className="border-t border-zinc-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-gray-400 text-sm">
-            Â© 2026 Utkrisht Alliance. All rights reserved.
+            © 2026 Utkrisht Alliance. All rights reserved.
           </p>
           <div className="flex gap-6">
             <a href="#" className="text-gray-400 hover:text-white transition-colors">

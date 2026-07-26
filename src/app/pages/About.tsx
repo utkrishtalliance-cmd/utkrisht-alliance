@@ -67,15 +67,15 @@ export function About() {
               </div>
               <ul className="space-y-4 text-gray-300 text-lg">
                 <li className="flex items-start gap-3">
-                  <span className="text-white mt-1">â€¢</span>
+                  <span className="text-white mt-1">•</span>
                   <span>Deliver world-class events that exceed expectations</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-white mt-1">â€¢</span>
+                  <span className="text-white mt-1">•</span>
                   <span>Build meaningful brand exposure for our partners</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-white mt-1">â€¢</span>
+                  <span className="text-white mt-1">•</span>
                   <span>Create high-value business ecosystems</span>
                 </li>
               </ul>

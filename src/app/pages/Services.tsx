@@ -116,7 +116,7 @@ export function Services() {
     {
       icon: Megaphone,
       title: "Advertisement",
-      description: "360Â° advertising solutions across every channel and format",
+      description: "360° advertising solutions across every channel and format",
       features: [
         "Digital & programmatic advertising",
         "Out-of-home & billboard campaigns",
@@ -173,7 +173,7 @@ export function Services() {
                   <ul className="space-y-3">
                     {service.features.map((feature, idx) => (
                       <li key={idx} className="flex items-start gap-3 text-gray-400">
-                        <span className="text-white mt-1">âœ¦</span>
+                        <span className="text-white mt-1">✦</span>
                         <span>{feature}</span>
                       </li>
                     ))}

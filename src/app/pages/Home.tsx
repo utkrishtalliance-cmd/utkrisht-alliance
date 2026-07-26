@@ -124,7 +124,7 @@ export function Home() {
               key={index}
               className="text-gray-400 uppercase tracking-wider text-sm whitespace-nowrap"
             >
-              {service} â€¢
+              {service} •
             </div>
           ))}
         </div>
