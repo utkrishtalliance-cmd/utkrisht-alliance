@@ -235,9 +235,12 @@ export function Contact() {
                     </div>
                     <div>
                       <h3 className="text-lg mb-2">Phone</h3>
-                      <p className="text-gray-400">
-                        +1 (XXX) XXX-XXXX
-                      </p>
+                      <a
+                        href="tel:+16399160639"
+                        className="text-gray-400 hover:text-white transition-colors"
+                      >
+                        +1 (639) 916-0639
+                      </a>
                       <p className="text-gray-500 text-sm mt-2">
                         Monday - Friday: 9:00 AM - 6:00 PM EST
                       </p>
