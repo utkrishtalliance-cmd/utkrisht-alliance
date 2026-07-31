@@ -2,6 +2,10 @@ import { motion } from "motion/react";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 import { useState } from "react";
 
+// Web3Forms access key — routes submissions to utkrishtalliance@gmail.com.
+// Get a free key at https://web3forms.com (enter that inbox address, verify by email).
+const WEB3FORMS_ACCESS_KEY = "YOUR_ACCESS_KEY_HERE";
+
 export function Contact() {
   const [formData, setFormData] = useState({
     name: "",
@@ -12,10 +16,63 @@ export function Contact() {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [status, setStatus] = useState<
+    "idle" | "submitting" | "success" | "error"
+  >("idle");
+  const [errorMsg, setErrorMsg] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Form submission logic would go here
-    console.log("Form submitted:", formData);
+
+    // Guard: until the Web3Forms access key is configured, behave inertly
+    // (no broken network call, no error shown). Remove once the key is set.
+    if (WEB3FORMS_ACCESS_KEY === "YOUR_ACCESS_KEY_HERE") {
+      console.warn("Contact form: Web3Forms access key not configured yet.");
+      return;
+    }
+
+    setStatus("submitting");
+    setErrorMsg("");
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: `New inquiry from ${formData.name} — Utkrisht Alliance`,
+          from_name: "Utkrisht Alliance Website",
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          company: formData.company,
+          interest: formData.interest,
+          message: formData.message,
+        }),
+      });
+      const data = await response.json();
+      if (data.success) {
+        setStatus("success");
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          company: "",
+          interest: "",
+          message: "",
+        });
+      } else {
+        setStatus("error");
+        setErrorMsg(data.message || "Something went wrong. Please try again.");
+      }
+    } catch {
+      setStatus("error");
+      setErrorMsg(
+        "Network error. Please check your connection and try again."
+      );
+    }
   };
 
   const handleChange = (
@@ -155,13 +212,34 @@ export function Contact() {
                   />
                 </div>
 
+                {/* Honeypot spam trap — bots fill this, humans never see it */}
+                <input
+                  type="checkbox"
+                  name="botcheck"
+                  className="hidden"
+                  style={{ display: "none" }}
+                  tabIndex={-1}
+                  autoComplete="off"
+                />
+
                 <button
                   type="submit"
-                  className="w-full px-8 py-4 bg-white text-black hover:bg-gray-200 transition-colors text-sm uppercase tracking-wider inline-flex items-center justify-center gap-2"
+                  disabled={status === "submitting"}
+                  className="w-full px-8 py-4 bg-white text-black hover:bg-gray-200 transition-colors text-sm uppercase tracking-wider inline-flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
                 >
-                  Send Message
+                  {status === "submitting" ? "Sending..." : "Send Message"}
                   <Send size={16} />
                 </button>
+
+                {status === "success" && (
+                  <p className="text-green-400 text-sm text-center">
+                    Thank you — your message has been sent. We'll respond within
+                    24 business hours.
+                  </p>
+                )}
+                {status === "error" && (
+                  <p className="text-red-400 text-sm text-center">{errorMsg}</p>
+                )}
               </form>
             </motion.div>
 
@@ -214,17 +292,17 @@ export function Contact() {
                     <div>
                       <h3 className="text-lg mb-2">Email</h3>
                       <a
-                        href="mailto:info@utkrisht.com"
+                        href="mailto:info@utkrishtalliance.com"
                         className="text-gray-400 hover:text-white transition-colors"
                       >
-                        info@utkrisht.com
+                        info@utkrishtalliance.com
                       </a>
                       <br />
                       <a
-                        href="mailto:partnerships@utkrisht.com"
+                        href="mailto:partnerships@utkrishtalliance.com"
                         className="text-gray-400 hover:text-white transition-colors"
                       >
-                        partnerships@utkrisht.com
+                        partnerships@utkrishtalliance.com
                       </a>
                     </div>
                   </div>

@@ -43,7 +43,7 @@ export function Footer() {
               </div>
               <div className="flex items-center gap-2 text-gray-400 text-sm">
                 <Mail size={16} />
-                <span>info@utkrisht.com</span>
+                <span>info@utkrishtalliance.com</span>
               </div>
               <div className="flex items-center gap-2 text-gray-400 text-sm">
                 <Phone size={16} />
