@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Utkrisht Alliance — We'll be back soon</title>
+<meta name="description" content="Utkrisht Alliance — our website is currently undergoing maintenance. We'll be back soon. For enquiries, contact info@utkrishtalliance.com.">
+<style>
+  :root{
+    --ground:#0b0b0d;
+    --ground-2:#101016;
+    --ink:#ece8e0;
+    --muted:#938e84;
+    --faint:#615c53;
+    --line:rgba(236,232,224,.10);
+    --accent:#c7a468;
+    --accent-hi:#e6d0a1;
+    --accent-soft:rgba(199,164,104,.16);
+    --serif:"Didot","Bodoni MT","Bodoni 72","Hoefler Text","Playfair Display",Georgia,"Times New Roman",serif;
+    --sans:"Neue Haas Grotesk Display Pro","Helvetica Neue",-apple-system,system-ui,"Segoe UI",Arial,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{height:100%;}
+  body{
+    min-height:100svh;background:var(--ground);color:var(--ink);
+    font-family:var(--sans);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+    display:flex;flex-direction:column;position:relative;overflow:hidden;
+  }
+  .glow,.vignette{position:fixed;inset:0;pointer-events:none;z-index:0;}
+  .glow{
+    background:
+      radial-gradient(52% 40% at 50% 34%, rgba(199,164,104,.11), transparent 72%),
+      radial-gradient(120% 100% at 50% 128%, rgba(0,0,0,.55), transparent 58%);
+    animation:breathe 13s ease-in-out infinite;
+  }
+  .vignette{box-shadow:inset 0 0 220px 60px rgba(0,0,0,.72);}
+  @keyframes breathe{0%,100%{opacity:.72;transform:scale(1)}50%{opacity:1;transform:scale(1.04)}}
+
+  .frame{
+    position:relative;z-index:1;flex:1;
+    display:grid;grid-template-rows:auto 1fr auto;
+    gap:clamp(28px,6vh,64px);
+    padding:clamp(26px,5vw,52px) clamp(22px,6vw,64px);
+    min-height:100svh;
+  }
+
+  .brand{display:flex;align-items:center;justify-content:center;gap:14px;}
+  .brand .mark{width:7px;height:7px;background:var(--accent);transform:rotate(45deg);
+    box-shadow:0 0 14px var(--accent-soft);flex:none;}
+  .brand .name{font-size:clamp(.7rem,1.4vw,.82rem);letter-spacing:.36em;text-transform:uppercase;color:var(--ink);font-weight:500;}
+
+  main{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:clamp(20px,3.4vh,34px);}
+  .eyebrow{display:inline-flex;align-items:center;gap:10px;
+    font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);}
+  .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);flex:none;
+    box-shadow:0 0 0 0 var(--accent-soft);animation:pulse 2.6s ease-out infinite;}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(199,164,104,.5)}70%{box-shadow:0 0 0 12px rgba(199,164,104,0)}100%{box-shadow:0 0 0 0 rgba(199,164,104,0)}}
+
+  h1{font-family:var(--serif);font-weight:400;color:var(--ink);
+    font-size:clamp(2.6rem,8.4vw,5.7rem);line-height:1.02;letter-spacing:-.012em;
+    text-wrap:balance;}
+  h1 em{font-style:italic;color:var(--accent-hi);}
+
+  .rule{position:relative;width:min(220px,44vw);height:1px;background:var(--line);overflow:hidden;}
+  .rule::after{content:"";position:absolute;top:0;left:-40%;width:40%;height:100%;
+    background:linear-gradient(90deg,transparent,var(--accent),transparent);
+    animation:sweep 4.6s ease-in-out infinite;}
+  @keyframes sweep{0%{left:-40%}55%,100%{left:120%}}
+
+  p.lede{max-width:48ch;font-size:clamp(1rem,1.5vw,1.12rem);line-height:1.75;color:var(--muted);}
+
+  .contact{display:flex;flex-wrap:wrap;justify-content:center;gap:clamp(20px,5vw,56px);margin-top:6px;}
+  .contact .item{display:flex;flex-direction:column;gap:7px;align-items:center;}
+  .contact .k{font-size:.64rem;letter-spacing:.24em;text-transform:uppercase;color:var(--faint);}
+  .contact a{color:var(--ink);text-decoration:none;font-size:1.02rem;letter-spacing:.01em;
+    border-bottom:1px solid transparent;padding-bottom:2px;transition:color .25s,border-color .25s;}
+  .contact a:hover,.contact a:focus-visible{color:var(--accent-hi);border-color:var(--accent);outline:none;}
+
+  footer{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;
+    font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);}
+  footer .sep{color:var(--line);}
+
+  .reveal{opacity:0;transform:translateY(14px);animation:rise .9s cubic-bezier(.2,.7,.2,1) forwards;}
+  .d1{animation-delay:.15s}.d2{animation-delay:.32s}.d3{animation-delay:.5s}.d4{animation-delay:.66s}.d5{animation-delay:.82s}.d6{animation-delay:1s}
+  @keyframes rise{to{opacity:1;transform:none}}
+
+  @media (max-width:560px){
+    footer{justify-content:center;text-align:center;}
+    .brand .name{letter-spacing:.28em;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    .glow,.dot,.rule::after{animation:none;}
+    .reveal{opacity:1;transform:none;animation:none;}
+    .glow{opacity:.9;}
+  }
+</style>
+</head>
+<body>
+  <div class="glow"></div>
+  <div class="vignette"></div>
+
+  <div class="frame">
+    <header class="brand reveal d1">
+      <span class="mark"></span>
+      <span class="name">Utkrisht Alliance</span>
+    </header>
+
+    <main>
+      <span class="eyebrow reveal d2"><span class="dot"></span>Under Maintenance</span>
+      <h1 class="reveal d3">We&rsquo;ll be back <em>soon</em>.</h1>
+      <div class="rule reveal d4"></div>
+      <p class="lede reveal d4">
+        Our website is being refined behind the scenes. As a media &amp; events house, we hold
+        the same standard for our own presence as for the experiences we curate — so we&rsquo;re
+        taking a moment to get every detail right. Thank you for your patience.
+      </p>
+      <div class="contact reveal d5">
+        <div class="item">
+          <span class="k">Enquiries</span>
+          <a href="mailto:info@utkrishtalliance.com">info@utkrishtalliance.com</a>
+        </div>
+        <div class="item">
+          <span class="k">Partnerships</span>
+          <a href="mailto:partnerships@utkrishtalliance.com">partnerships@utkrishtalliance.com</a>
+        </div>
+        <div class="item">
+          <span class="k">Call</span>
+          <a href="tel:+16399160639">+1 (639) 916&#8209;0639</a>
+        </div>
+      </div>
+    </main>
+
+    <footer class="reveal d6">
+      <span>Toronto, Ontario <span class="sep">·</span> Operating Globally</span>
+      <span>&copy; 2026 Utkrisht Alliance</span>
+    </footer>
+  </div>
+</body>
+</html>
