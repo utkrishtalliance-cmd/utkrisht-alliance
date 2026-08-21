@@ -13,15 +13,44 @@ type UpcomingEvent = {
   endsOn: string;
   date: string;
   location: string;
-  capacity: string;
+  capacity?: string;
   description: string;
   image: string;
+  /** Optional object-position class when a centre crop loses the subject. */
+  imagePosition?: string;
   status: string;
 };
 
+// NOTE — The 6ix Dram serves alcohol: it needs an AGCO Industry Promotional
+// permit filed at least 30 days ahead (allow up to 3 weeks' review), Smart Serve
+// certified staff, and — for any brand without an LCBO listing — a market
+// research structure to source product legally.
+//
 // Venues are listed as "to be announced" until contracts are signed — naming a
 // room we haven't booked is the kind of detail an HNI audience checks.
 const ALL_UPCOMING: UpcomingEvent[] = [
+  {
+    title: "The Utkrisht Circle — Inaugural Salon",
+    endsOn: "2026-12-05",
+    date: "Saturday, December 5, 2026",
+    location: "Toronto, Ontario — by invitation",
+    capacity: "40 covers · invitation only",
+    description:
+      "Our first gathering: a private dinner for forty. No stage, no pitch — an evening among the founders, investors and collectors the season is built for. Invitations open on request.",
+    image: "/images/photo-1762765685348-4bced247d12c.jpg",
+    imagePosition: "object-bottom",
+    status: "Save the Date",
+  },
+  {
+    title: "The 6ix Dram",
+    endsOn: "2027-02-27",
+    date: "Saturday, February 27, 2027",
+    location: "Downtown Toronto — venue to be announced",
+    description:
+      "An evening of rare and small-batch whisky, with a focus on the Indian single malts now collecting world awards. Part of our founding season.",
+    image: "/images/photo-1768508948485-a7adc1f3427f.jpg",
+    status: "Save the Date",
+  },
   {
     title: "Utkrisht Investment Summit",
     endsOn: "2027-05-09",
@@ -30,7 +59,7 @@ const ALL_UPCOMING: UpcomingEvent[] = [
     capacity: "400–600 delegates",
     description:
       "Three tracks in one room for Canadian NRI families: Dubai residential, Indian luxury residential, and senior living for parents in India. Timed to Akshaya Tritiya, the most auspicious acquisition day of the year.",
-    image: "/images/photo-1768508948485-a7adc1f3427f.jpg",
+    image: "/images/photo-1660486615549-d50a6564e865.jpg",
     status: "Save the Date",
   },
   {
@@ -41,7 +70,7 @@ const ALL_UPCOMING: UpcomingEvent[] = [
     capacity: "2,500–4,000 over two days",
     description:
       "Four halls across luxury Ayurveda and beauty, premium Indian and world spirits, international education, and luxury lifestyle — watches, art, automotive and hospitality.",
-    image: "/images/photo-1660486615549-d50a6564e865.jpg",
+    image: "/images/photo-1579254216656-3c0c16a3bdd6.jpg",
     status: "Save the Date",
   },
   {
@@ -52,7 +81,7 @@ const ALL_UPCOMING: UpcomingEvent[] = [
     capacity: "350–500 guests · 12–18 designers",
     description:
       "An invitation-only bridal and occasion-wear showcase with private appointment suites, timed nine to twelve months ahead of the 2028 wedding season so commissions have room to be made.",
-    image: "/images/photo-1768913640595-104e0170dfee.jpg",
+    image: "/images/photo-1773745060497-4cc1df774c72.jpg",
     status: "Save the Date",
   },
 ];
@@ -61,7 +90,9 @@ export function Events() {
   // Staleness guard: an event disappears from "Upcoming" the day after it ends,
   // so a lapsed date can never sit here advertising itself as open.
   const today = new Date().toISOString().slice(0, 10);
-  const upcomingEvents = ALL_UPCOMING.filter((e) => e.endsOn >= today);
+  const upcomingEvents = ALL_UPCOMING.filter((e) => e.endsOn >= today).sort(
+    (a, b) => a.endsOn.localeCompare(b.endsOn)
+  );
 
   const pastEvents = [
     {
@@ -150,7 +181,7 @@ export function Events() {
                   <ImageWithFallback
                     src={event.image}
                     alt={event.title}
-                    className="w-full h-full object-cover"
+                    className={`w-full h-full object-cover ${event.imagePosition ?? ""}`}
                   />
                   <div className="absolute top-4 right-4 bg-white text-black px-4 py-2 text-sm uppercase tracking-wider">
                     {event.status}
@@ -170,10 +201,12 @@ export function Events() {
                       <MapPin size={20} />
                       <span>{event.location}</span>
                     </div>
-                    <div className="flex items-center gap-3 text-gray-400">
-                      <Users size={20} />
-                      <span>{event.capacity}</span>
-                    </div>
+                    {event.capacity && (
+                      <div className="flex items-center gap-3 text-gray-400">
+                        <Users size={20} />
+                        <span>{event.capacity}</span>
+                      </div>
+                    )}
                   </div>
 
                   <Link

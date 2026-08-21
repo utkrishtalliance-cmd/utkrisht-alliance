@@ -164,7 +164,7 @@ export function Partner() {
             className="max-w-4xl mx-auto text-center"
           >
             <p className="text-sm uppercase tracking-[0.2em] text-gray-400 mb-6">
-              Founding Season · 2027
+              Founding Season · 2026–27
             </p>
             <h1 className="text-5xl md:text-7xl mb-8">Partner With Us</h1>
             <p className="text-xl text-gray-300 leading-relaxed">
