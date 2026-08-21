@@ -2,55 +2,59 @@ import { motion } from "motion/react";
 import { Play, Image as ImageIcon, FileText } from "lucide-react";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 
+// Toggle for the "Press & Features" section. Kept OFF until we have press
+// coverage as a new business. Flip to `true` to bring the section back.
+const SHOW_PRESS_FEATURES = false;
+
 export function Media() {
   const portfolioItems = [
     {
       title: "Luxury Fashion Week 2025",
       category: "Event Coverage",
       type: "video",
-      image: "https://images.unsplash.com/photo-1768913640595-104e0170dfee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBldmVudCUyMGZhc2hpb24lMjBzaG93fGVufDF8fHx8MTc3NDA3MTEyMHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: "/images/photo-1768913640595-104e0170dfee.jpg",
     },
     {
       title: "Premium Real Estate Campaign",
       category: "Brand Photography",
       type: "image",
-      image: "https://images.unsplash.com/photo-1660486615549-d50a6564e865?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcmVtaXVtJTIwcmVhbCUyMGVzdGF0ZSUyMGV4aGliaXRpb258ZW58MXx8fHwxNzc0MDcxMTIxfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: "/images/photo-1660486615549-d50a6564e865.jpg",
     },
     {
       title: "VIP Networking Gala",
       category: "Event Aftermovie",
       type: "video",
-      image: "https://images.unsplash.com/photo-1768508948485-a7adc1f3427f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMG5ldHdvcmtpbmclMjByZWNlcHRpb258ZW58MXx8fHwxNzc0MDcxMTI1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: "/images/photo-1768508948485-a7adc1f3427f.jpg",
     },
     {
       title: "Luxury Brand Showcase",
       category: "Commercial Production",
       type: "video",
-      image: "https://images.unsplash.com/photo-1769509456084-dacd3cde0e20?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBicmFuZCUyMHNob3djYXNlfGVufDF8fHx8MTc3NDA3MTEyMnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: "/images/photo-1769509456084-dacd3cde0e20.jpg",
     },
     {
       title: "Corporate Event Photography",
       category: "Event Coverage",
       type: "image",
-      image: "https://images.unsplash.com/photo-1762765685348-4bced247d12c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb3Jwb3JhdGUlMjBldmVudCUyMHNldHVwfGVufDF8fHx8MTc3Mzk3MTQ1OHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: "/images/photo-1762765685348-4bced247d12c.jpg",
     },
     {
       title: "Media Production Services",
       category: "Brand Campaign",
       type: "video",
-      image: "https://images.unsplash.com/photo-1764068866740-506ba4cf64e4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBtZWRpYSUyMHByb2R1Y3Rpb258ZW58MXx8fHwxNzc0MDcxMTIyfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: "/images/photo-1764068866740-506ba4cf64e4.jpg",
     },
     {
       title: "Luxury Venue Photography",
       category: "Location Shoots",
       type: "image",
-      image: "https://images.unsplash.com/photo-1773745060497-4cc1df774c72?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBldmVudCUyMHZlbnVlfGVufDF8fHx8MTc3NDA3MTEyNXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: "/images/photo-1773745060497-4cc1df774c72.jpg",
     },
     {
       title: "Studio Production Work",
       category: "Commercial Photography",
       type: "image",
-      image: "https://images.unsplash.com/photo-1641260783083-a0af6cf964ca?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb3Jwb3JhdGUlMjBwaG90b2dyYXBoeSUyMHN0dWRpb3xlbnwxfHx8fDE3NzQwNzExMjZ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: "/images/photo-1641260783083-a0af6cf964ca.jpg",
     },
   ];
 
@@ -162,7 +166,7 @@ export function Media() {
               className="relative aspect-video bg-zinc-900 group cursor-pointer overflow-hidden"
             >
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1768913640595-104e0170dfee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBldmVudCUyMGZhc2hpb24lMjBzaG93fGVufDF8fHx8MTc3NDA3MTEyMHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                src="/images/photo-1768913640595-104e0170dfee.jpg"
                 alt="Featured video"
                 className="w-full h-full object-cover"
               />
@@ -185,7 +189,7 @@ export function Media() {
               className="relative aspect-video bg-zinc-900 group cursor-pointer overflow-hidden"
             >
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1764068866740-506ba4cf64e4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBtZWRpYSUyMHByb2R1Y3Rpb258ZW58MXx8fHwxNzc0MDcxMTIyfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                src="/images/photo-1764068866740-506ba4cf64e4.jpg"
                 alt="Featured video"
                 className="w-full h-full object-cover"
               />
@@ -203,7 +207,9 @@ export function Media() {
         </div>
       </section>
 
-      {/* Press & Features */}
+      {/* Press & Features — shelved until we have press coverage as a new
+          business. Flip SHOW_PRESS_FEATURES (top of file) to true to restore it. */}
+      {SHOW_PRESS_FEATURES && (
       <section className="py-24">
         <div className="container mx-auto px-6">
           <motion.div
@@ -242,6 +248,7 @@ export function Media() {
           </div>
         </div>
       </section>
+      )}
 
       {/* Stats Section */}
       <section className="py-24 bg-zinc-950">

@@ -2,6 +2,7 @@ import { Link, useLocation } from "react-router";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
+import { SHOW_MEDIA_PAGE } from "../featureFlags";
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -42,7 +43,7 @@ export function Navigation() {
     { to: "/media", label: "Media" },
     { to: "/insights", label: "Insights" },
     { to: "/contact", label: "Contact" },
-  ];
+  ].filter((link) => SHOW_MEDIA_PAGE || link.to !== "/media");
 
   return (
     <nav
@@ -52,8 +53,12 @@ export function Navigation() {
     >
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between">
-          <Link to="/" className="text-2xl font-bold tracking-wider">
-            UTKRISHT ALLIANCE
+          <Link to="/" aria-label="Utkrisht Alliance — home" className="inline-flex items-center">
+            <img
+              src="/utkrisht-logo.png"
+              alt="Utkrisht Alliance"
+              className="h-12 md:h-14 w-auto rounded-xl ring-1 ring-white/10"
+            />
           </Link>
 
           {/* Desktop Navigation */}

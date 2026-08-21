@@ -1,10 +1,33 @@
 import { motion } from "motion/react";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 import { useState } from "react";
+import { WEB3FORMS_ACCESS_KEY, CONTACT_EMAIL } from "../config";
 
-// Web3Forms access key — routes submissions to utkrishtalliance@gmail.com.
-// Get a free key at https://web3forms.com (enter that inbox address, verify by email).
-const WEB3FORMS_ACCESS_KEY = "YOUR_ACCESS_KEY_HERE";
+// Builds a pre-filled mailto: link so a lead is never lost, even when the
+// delivery backend isn't configured yet or a submission fails.
+function buildMailtoHref(d: {
+  name: string;
+  email: string;
+  phone: string;
+  company: string;
+  interest: string;
+  message: string;
+}) {
+  const subject = `Website inquiry${d.name ? ` — ${d.name}` : ""}`;
+  const body = [
+    `Name: ${d.name}`,
+    `Email: ${d.email}`,
+    `Phone: ${d.phone}`,
+    `Company: ${d.company}`,
+    `Area of interest: ${d.interest}`,
+    "",
+    "Message:",
+    d.message,
+  ].join("\n");
+  return `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
+    subject
+  )}&body=${encodeURIComponent(body)}`;
+}
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -17,62 +40,60 @@ export function Contact() {
   });
 
   const [status, setStatus] = useState<
-    "idle" | "submitting" | "success" | "error"
+    "idle" | "submitting" | "success" | "error" | "fallback"
   >("idle");
   const [errorMsg, setErrorMsg] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
-    // Guard: until the Web3Forms access key is configured, behave inertly
-    // (no broken network call, no error shown). Remove once the key is set.
-    if (WEB3FORMS_ACCESS_KEY === "YOUR_ACCESS_KEY_HERE") {
-      console.warn("Contact form: Web3Forms access key not configured yet.");
-      return;
-    }
-
     setStatus("submitting");
     setErrorMsg("");
-    try {
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({
-          access_key: WEB3FORMS_ACCESS_KEY,
-          subject: `New inquiry from ${formData.name} — Utkrisht Alliance`,
-          from_name: "Utkrisht Alliance Website",
-          name: formData.name,
-          email: formData.email,
-          phone: formData.phone,
-          company: formData.company,
-          interest: formData.interest,
-          message: formData.message,
-        }),
-      });
-      const data = await response.json();
-      if (data.success) {
-        setStatus("success");
-        setFormData({
-          name: "",
-          email: "",
-          phone: "",
-          company: "",
-          interest: "",
-          message: "",
+
+    const keyConfigured = WEB3FORMS_ACCESS_KEY !== "YOUR_ACCESS_KEY_HERE";
+
+    if (keyConfigured) {
+      try {
+        const response = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            access_key: WEB3FORMS_ACCESS_KEY,
+            subject: `New inquiry from ${formData.name} — Utkrisht Alliance`,
+            from_name: "Utkrisht Alliance Website",
+            name: formData.name,
+            email: formData.email,
+            phone: formData.phone,
+            company: formData.company,
+            interest: formData.interest,
+            message: formData.message,
+          }),
         });
-      } else {
-        setStatus("error");
-        setErrorMsg(data.message || "Something went wrong. Please try again.");
+        const data = await response.json();
+        if (data.success) {
+          setStatus("success");
+          setFormData({
+            name: "",
+            email: "",
+            phone: "",
+            company: "",
+            interest: "",
+            message: "",
+          });
+          return;
+        }
+        // Backend reachable but rejected — fall through to the email fallback.
+      } catch {
+        // Network error — fall through to the email fallback.
       }
-    } catch {
-      setStatus("error");
-      setErrorMsg(
-        "Network error. Please check your connection and try again."
-      );
     }
+
+    // No backend configured yet, or delivery failed: open the visitor's email
+    // app with the inquiry pre-filled so the lead is never silently lost.
+    window.location.href = buildMailtoHref(formData);
+    setStatus("fallback");
   };
 
   const handleChange = (
@@ -188,11 +209,15 @@ export function Contact() {
                     className="w-full px-4 py-3 bg-black border border-zinc-700 focus:border-white outline-none transition-colors"
                   >
                     <option value="">Select an option</option>
-                    <option value="event-partnership">Event Partnership</option>
-                    <option value="sponsorship">Sponsorship Opportunities</option>
-                    <option value="exhibition">Exhibition Booth</option>
-                    <option value="media-services">Media & Production Services</option>
-                    <option value="brand-consulting">Brand Consulting</option>
+                    <option value="brand-strategy-consulting">Brand Strategy &amp; Consulting</option>
+                    <option value="experiential-events">Experiential Events</option>
+                    <option value="exhibitions-trade-platforms">Exhibitions &amp; Trade Platforms</option>
+                    <option value="media-production">Media &amp; Production</option>
+                    <option value="pr-partnerships">PR &amp; Partnerships</option>
+                    <option value="website-development">Website Development</option>
+                    <option value="social-media-marketing">Social Media Marketing</option>
+                    <option value="brand-licensing-franchising">Global Brand Licensing / Franchising</option>
+                    <option value="advertisement">Advertisement</option>
                     <option value="other">Other</option>
                   </select>
                 </div>
@@ -239,6 +264,19 @@ export function Contact() {
                 )}
                 {status === "error" && (
                   <p className="text-red-400 text-sm text-center">{errorMsg}</p>
+                )}
+                {status === "fallback" && (
+                  <p className="text-gray-300 text-sm text-center">
+                    Opening your email app with your message ready to send. If it
+                    doesn't open, email us directly at{" "}
+                    <a
+                      href={`mailto:${CONTACT_EMAIL}`}
+                      className="underline hover:text-white"
+                    >
+                      {CONTACT_EMAIL}
+                    </a>
+                    .
+                  </p>
                 )}
               </form>
             </motion.div>

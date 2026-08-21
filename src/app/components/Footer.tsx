@@ -8,7 +8,11 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
           {/* Brand */}
           <div>
-            <h3 className="text-2xl font-bold mb-4">UTKRISHT ALLIANCE</h3>
+            <img
+              src="/utkrisht-logo.png"
+              alt="Utkrisht Alliance"
+              className="h-28 w-auto rounded-xl ring-1 ring-white/10 mb-5"
+            />
             <p className="text-gray-400 text-sm leading-relaxed">
               A premier media & events company connecting luxury brands with high-value audiences worldwide.
             </p>
@@ -60,13 +64,29 @@ export function Footer() {
             © 2026 Utkrisht Alliance. All rights reserved.
           </p>
           <div className="flex gap-6">
-            <a href="#" className="text-gray-400 hover:text-white transition-colors">
+            <a
+              href="https://www.instagram.com/utkrishtalliance/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Utkrisht Alliance on Instagram"
+              className="text-gray-400 hover:text-white transition-colors"
+            >
               <Instagram size={20} />
             </a>
-            <a href="#" className="text-gray-400 hover:text-white transition-colors">
+            <a
+              href="https://www.linkedin.com/company/utkrisht-alliance/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Utkrisht Alliance on LinkedIn"
+              className="text-gray-400 hover:text-white transition-colors"
+            >
               <Linkedin size={20} />
             </a>
-            <a href="#" className="text-gray-400 hover:text-white transition-colors">
+            <a
+              href="mailto:info@utkrishtalliance.com"
+              aria-label="Email Utkrisht Alliance"
+              className="text-gray-400 hover:text-white transition-colors"
+            >
               <Mail size={20} />
             </a>
           </div>

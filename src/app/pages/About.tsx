@@ -28,7 +28,7 @@ export function About() {
       {/* Image Section */}
       <section className="relative h-[60vh]">
         <ImageWithFallback
-          src="https://images.unsplash.com/photo-1762765685348-4bced247d12c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb3Jwb3JhdGUlMjBldmVudCUyMHNldHVwfGVufDF8fHx8MTc3Mzk3MTQ1OHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+          src="/images/photo-1762765685348-4bced247d12c.jpg"
           alt="Corporate event"
           className="w-full h-full object-cover"
         />

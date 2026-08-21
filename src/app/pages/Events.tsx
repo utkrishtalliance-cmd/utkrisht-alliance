@@ -3,6 +3,10 @@ import { Calendar, MapPin, Users, ArrowRight } from "lucide-react";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { Link } from "react-router";
 
+// Toggle for the "Past Events" showcase. Kept OFF until we have events to show
+// as a new business. Flip to `true` to bring the section back.
+const SHOW_PAST_EVENTS = false;
+
 export function Events() {
   const upcomingEvents = [
     {
@@ -12,7 +16,7 @@ export function Events() {
       attendees: "500+ HNI/UHNI",
       description:
         "An exclusive showcase of premium brands across fashion, real estate, and lifestyle sectors.",
-      image: "https://images.unsplash.com/photo-1660486615549-d50a6564e865?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcmVtaXVtJTIwcmVhbCUyMGVzdGF0ZSUyMGV4aGliaXRpb258ZW58MXx8fHwxNzc0MDcxMTIxfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: "/images/photo-1660486615549-d50a6564e865.jpg",
       status: "Registration Open",
     },
     {
@@ -22,7 +26,7 @@ export function Events() {
       attendees: "1000+ Attendees",
       description:
         "A premier fashion event featuring emerging and established designers from around the world.",
-      image: "https://images.unsplash.com/photo-1768913640595-104e0170dfee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBldmVudCUyMGZhc2hpb24lMjBzaG93fGVufDF8fHx8MTc3NDA3MTEyMHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: "/images/photo-1768913640595-104e0170dfee.jpg",
       status: "Coming Soon",
     },
     {
@@ -32,7 +36,7 @@ export function Events() {
       attendees: "300+ Investors",
       description:
         "Connect with leading investors and explore opportunities in real estate and luxury markets.",
-      image: "https://images.unsplash.com/photo-1768508948485-a7adc1f3427f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMG5ldHdvcmtpbmclMjByZWNlcHRpb258ZW58MXx8fHwxNzc0MDcxMTI1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: "/images/photo-1768508948485-a7adc1f3427f.jpg",
       status: "Coming Soon",
     },
   ];
@@ -42,25 +46,25 @@ export function Events() {
       title: "Luxury Lifestyle Gala 2025",
       date: "December 2025",
       highlights: "250+ attendees, 30+ luxury brands, $2M+ in deals",
-      image: "https://images.unsplash.com/photo-1773745060497-4cc1df774c72?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBldmVudCUyMHZlbnVlfGVufDF8fHx8MTc3NDA3MTEyNXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: "/images/photo-1773745060497-4cc1df774c72.jpg",
     },
     {
       title: "Fashion Forward Showcase 2025",
       date: "October 2025",
       highlights: "15 designers, 500+ fashion enthusiasts, media coverage",
-      image: "https://images.unsplash.com/photo-1769509456084-dacd3cde0e20?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBicmFuZCUyMHNob3djYXNlfGVufDF8fHx8MTc3NDA3MTEyMnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: "/images/photo-1769509456084-dacd3cde0e20.jpg",
     },
     {
       title: "Real Estate Excellence Awards",
       date: "September 2025",
       highlights: "200+ industry leaders, 25 awards, networking gala",
-      image: "https://images.unsplash.com/photo-1762765685348-4bced247d12c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb3Jwb3JhdGUlMjBldmVudCUyMHNldHVwfGVufDF8fHx8MTc3Mzk3MTQ1OHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: "/images/photo-1762765685348-4bced247d12c.jpg",
     },
     {
       title: "VIP Networking Soirée",
       date: "July 2025",
       highlights: "100 HNI attendees, exclusive venue, curated experiences",
-      image: "https://images.unsplash.com/photo-1764068866740-506ba4cf64e4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBtZWRpYSUyMHByb2R1Y3Rpb258ZW58MXx8fHwxNzc0MDcxMTIyfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: "/images/photo-1764068866740-506ba4cf64e4.jpg",
     },
   ];
 
@@ -154,7 +158,9 @@ export function Events() {
         </div>
       </section>
 
-      {/* Past Events */}
+      {/* Past Events — shelved until we have events to showcase as a new
+          business. Flip SHOW_PAST_EVENTS (top of file) to true to restore it. */}
+      {SHOW_PAST_EVENTS && (
       <section className="py-24 bg-zinc-950">
         <div className="container mx-auto px-6">
           <motion.div
@@ -196,6 +202,7 @@ export function Events() {
           </div>
         </div>
       </section>
+      )}
 
       {/* Flagship Properties */}
       <section className="py-24">

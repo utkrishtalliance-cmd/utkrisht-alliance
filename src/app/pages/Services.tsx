@@ -27,7 +27,7 @@ export function Services() {
         "Luxury audience targeting & insights",
         "Competitive analysis & benchmarking",
       ],
-      image: "https://images.unsplash.com/photo-1758633854736-8973bcd84dd1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBicmFuZCUyMHN0cmF0ZWd5JTIwY29uc3VsdGluZ3xlbnwxfHx8fDE3NzQzMTY3MTF8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: "/images/photo-1758633854736-8973bcd84dd1.jpg",
     },
     {
       icon: Sparkles,
@@ -39,7 +39,7 @@ export function Services() {
         "Private VIP networking events",
         "Product launch experiences",
       ],
-      image: "https://images.unsplash.com/photo-1579254216656-3c0c16a3bdd6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxleHBlcmllbnRpYWwlMjBldmVudCUyMGx1eHVyeSUyMGdhbGF8ZW58MXx8fHwxNzc0MzE2NzEyfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: "/images/photo-1579254216656-3c0c16a3bdd6.jpg",
     },
     {
       icon: Building2,
@@ -51,7 +51,7 @@ export function Services() {
         "Industry-specific trade shows",
         "B2B matchmaking platforms",
       ],
-      image: "https://images.unsplash.com/photo-1762028892701-692dc360db08?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0cmFkZSUyMGV4aGliaXRpb24lMjBib290aCUyMGRpc3BsYXl8ZW58MXx8fHwxNzc0MzE2NzEyfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: "/images/photo-1762028892701-692dc360db08.jpg",
     },
     {
       icon: Camera,
@@ -63,7 +63,7 @@ export function Services() {
         "Event coverage & aftermovies",
         "Digital content creation",
       ],
-      image: "https://images.unsplash.com/photo-1634812930988-141ddf8ecab3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjB2aWRlbyUyMHByb2R1Y3Rpb24lMjBjYW1lcmF8ZW58MXx8fHwxNzc0MjAyNTU4fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: "/images/photo-1634812930988-141ddf8ecab3.jpg",
     },
     {
       icon: Users,
@@ -75,7 +75,7 @@ export function Services() {
         "Strategic brand alliances",
         "Media relations & press coverage",
       ],
-      image: "https://images.unsplash.com/photo-1696861270495-7f35c35c3273?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwdWJsaWMlMjByZWxhdGlvbnMlMjBwYXJ0bmVyc2hpcCUyMGhhbmRzaGFrZXxlbnwxfHx8fDE3NzQzMTY3MTN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: "/images/photo-1696861270495-7f35c35c3273.jpg",
     },
     {
       icon: Globe2,
@@ -85,9 +85,10 @@ export function Services() {
         "Custom luxury website design",
         "E-commerce & booking platforms",
         "Mobile-responsive development",
-        "Performance optimization & SEO",
+        "Performance optimization",
+        "Search, answer & generative engine optimization (SEO, AEO, GEO)",
       ],
-      image: "https://images.unsplash.com/photo-1642602519174-0318c786f6d8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjB3ZWJzaXRlJTIwZGV2ZWxvcG1lbnQlMjBkZXNpZ258ZW58MXx8fHwxNzc0MzE3MTE0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: "/images/photo-1642602519174-0318c786f6d8.jpg",
     },
     {
       icon: Share2,
@@ -99,7 +100,7 @@ export function Services() {
         "Community management & engagement",
         "Analytics & performance tracking",
       ],
-      image: "https://images.unsplash.com/photo-1769596722541-40dedee6789d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzb2NpYWwlMjBtZWRpYSUyMG1hcmtldGluZyUyMHN0cmF0ZWd5fGVufDF8fHx8MTc3NDIzODA3MXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: "/images/photo-1769596722541-40dedee6789d.jpg",
     },
     {
       icon: Award,
@@ -111,7 +112,7 @@ export function Services() {
         "Brand compliance & quality control",
         "Territory rights & partnership structuring",
       ],
-      image: "https://images.unsplash.com/photo-1723853310542-a9d2d84f5fa2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnbG9iYWwlMjBidXNpbmVzcyUyMGZyYW5jaGlzZSUyMHBhcnRuZXJzaGlwfGVufDF8fHx8MTc3NDMxNzQ2OHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: "/images/photo-1723853310542-a9d2d84f5fa2.jpg",
     },
     {
       icon: Megaphone,
@@ -125,7 +126,7 @@ export function Services() {
         "Event & experiential advertising",
         "Search, display & video ads",
       ],
-      image: "https://images.unsplash.com/photo-1760180139823-527522243bae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhZHZlcnRpc2luZyUyMGJpbGxib2FyZCUyMGRpZ2l0YWwlMjBjYW1wYWlnbiUyMGx1eHVyeXxlbnwxfHx8fDE3ODQ4MjUzMDR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      image: "/images/photo-1760180139823-527522243bae.jpg",
     },
   ];
 

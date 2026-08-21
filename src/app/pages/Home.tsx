@@ -3,6 +3,11 @@ import { motion } from "motion/react";
 import { ArrowRight, Globe, Users, TrendingUp, Briefcase } from "lucide-react";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 
+// Toggle for the hero's "Explore Our Work" button. Kept OFF until we have real
+// work to showcase as a new business. Flip to `true` to restore the original
+// two-button hero (Explore Our Work primary + Partner With Us secondary).
+const SHOW_EXPLORE_WORK = false;
+
 export function Home() {
   const services = [
     "Strategy",
@@ -16,22 +21,22 @@ export function Home() {
     {
       title: "Fashion Shows",
       description: "Curated runway experiences for luxury brands",
-      image: "https://images.unsplash.com/photo-1768913640595-104e0170dfee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBldmVudCUyMGZhc2hpb24lMjBzaG93fGVufDF8fHx8MTc3NDA3MTEyMHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: "/images/photo-1768913640595-104e0170dfee.jpg",
     },
     {
       title: "Luxury Real Estate Exhibitions",
       description: "Premium property showcases for investors",
-      image: "https://images.unsplash.com/photo-1660486615549-d50a6564e865?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcmVtaXVtJTIwcmVhbCUyMGVzdGF0ZSUyMGV4aGliaXRpb258ZW58MXx8fHwxNzc0MDcxMTIxfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: "/images/photo-1660486615549-d50a6564e865.jpg",
     },
     {
       title: "Invite-Only Networking Events",
       description: "Exclusive connections for high-value audiences",
-      image: "https://images.unsplash.com/photo-1768508948485-a7adc1f3427f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMG5ldHdvcmtpbmclMjByZWNlcHRpb258ZW58MXx8fHwxNzc0MDcxMTI1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: "/images/photo-1768508948485-a7adc1f3427f.jpg",
     },
     {
       title: "Brand Showcases",
       description: "Immersive experiences that elevate brands",
-      image: "https://images.unsplash.com/photo-1769509456084-dacd3cde0e20?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBicmFuZCUyMHNob3djYXNlfGVufDF8fHx8MTc3NDA3MTEyMnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: "/images/photo-1769509456084-dacd3cde0e20.jpg",
     },
   ];
 
@@ -65,7 +70,7 @@ export function Home() {
         <div className="absolute inset-0 bg-gradient-to-b from-black via-black/80 to-black z-10" />
         <div className="absolute inset-0">
           <ImageWithFallback
-            src="https://images.unsplash.com/photo-1773745060497-4cc1df774c72?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBldmVudCUyMHZlbnVlfGVufDF8fHx8MTc3NDA3MTEyNXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+            src="/images/photo-1773745060497-4cc1df774c72.jpg"
             alt="Luxury venue"
             className="w-full h-full object-cover opacity-30"
           />
@@ -99,19 +104,31 @@ export function Home() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
-            <Link
-              to="/media"
-              className="px-8 py-4 bg-white text-black hover:bg-gray-200 transition-colors text-sm uppercase tracking-wider inline-flex items-center justify-center gap-2"
-            >
-              Explore Our Work
-              <ArrowRight size={16} />
-            </Link>
-            <Link
-              to="/partner"
-              className="px-8 py-4 border border-white text-white hover:bg-white hover:text-black transition-colors text-sm uppercase tracking-wider inline-flex items-center justify-center"
-            >
-              Partner With Us
-            </Link>
+            {SHOW_EXPLORE_WORK ? (
+              <>
+                <Link
+                  to="/media"
+                  className="px-8 py-4 bg-white text-black hover:bg-gray-200 transition-colors text-sm uppercase tracking-wider inline-flex items-center justify-center gap-2"
+                >
+                  Explore Our Work
+                  <ArrowRight size={16} />
+                </Link>
+                <Link
+                  to="/partner"
+                  className="px-8 py-4 border border-white text-white hover:bg-white hover:text-black transition-colors text-sm uppercase tracking-wider inline-flex items-center justify-center"
+                >
+                  Partner With Us
+                </Link>
+              </>
+            ) : (
+              <Link
+                to="/partner"
+                className="px-8 py-4 bg-white text-black hover:bg-gray-200 transition-colors text-sm uppercase tracking-wider inline-flex items-center justify-center gap-2"
+              >
+                Partner With Us
+                <ArrowRight size={16} />
+              </Link>
+            )}
           </motion.div>
         </div>
       </section>
