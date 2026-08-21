@@ -55,9 +55,9 @@ export function Navigation() {
         <div className="flex items-center justify-between">
           <Link to="/" aria-label="Utkrisht Alliance — home" className="inline-flex items-center">
             <img
-              src="/utkrisht-logo.png"
+              src="/utkrisht-logo-wide.webp"
               alt="Utkrisht Alliance"
-              className="h-12 md:h-14 w-auto rounded-xl ring-1 ring-white/10"
+              className="h-12 md:h-14 w-auto rounded-lg ring-1 ring-white/10"
             />
           </Link>
 

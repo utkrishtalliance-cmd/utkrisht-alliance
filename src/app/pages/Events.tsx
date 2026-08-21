@@ -7,39 +7,61 @@ import { Link } from "react-router";
 // as a new business. Flip to `true` to bring the section back.
 const SHOW_PAST_EVENTS = false;
 
+type UpcomingEvent = {
+  title: string;
+  /** Last day of the event, ISO `YYYY-MM-DD`. Drives the staleness guard below. */
+  endsOn: string;
+  date: string;
+  location: string;
+  capacity: string;
+  description: string;
+  image: string;
+  status: string;
+};
+
+// Venues are listed as "to be announced" until contracts are signed — naming a
+// room we haven't booked is the kind of detail an HNI audience checks.
+const ALL_UPCOMING: UpcomingEvent[] = [
+  {
+    title: "Utkrisht Investment Summit",
+    endsOn: "2027-05-09",
+    date: "Sunday, May 9, 2027",
+    location: "Toronto, Ontario — venue to be announced",
+    capacity: "400–600 delegates",
+    description:
+      "Three tracks in one room for Canadian NRI families: Dubai residential, Indian luxury residential, and senior living for parents in India. Timed to Akshaya Tritiya, the most auspicious acquisition day of the year.",
+    image: "/images/photo-1768508948485-a7adc1f3427f.jpg",
+    status: "Save the Date",
+  },
+  {
+    title: "Utkrisht Luxury Expo",
+    endsOn: "2027-06-13",
+    date: "June 12–13, 2027",
+    location: "Toronto, Ontario — venue to be announced",
+    capacity: "2,500–4,000 over two days",
+    description:
+      "Four halls across luxury Ayurveda and beauty, premium Indian and world spirits, international education, and luxury lifestyle — watches, art, automotive and hospitality.",
+    image: "/images/photo-1660486615549-d50a6564e865.jpg",
+    status: "Save the Date",
+  },
+  {
+    title: "Utkrisht Couture",
+    endsOn: "2027-11-06",
+    date: "Saturday, November 6, 2027",
+    location: "Toronto, Ontario — venue to be announced",
+    capacity: "350–500 guests · 12–18 designers",
+    description:
+      "An invitation-only bridal and occasion-wear showcase with private appointment suites, timed nine to twelve months ahead of the 2028 wedding season so commissions have room to be made.",
+    image: "/images/photo-1768913640595-104e0170dfee.jpg",
+    status: "Save the Date",
+  },
+];
+
 export function Events() {
-  const upcomingEvents = [
-    {
-      title: "Utkrisht Luxury Expo 2026",
-      date: "June 15-17, 2026",
-      location: "Toronto Convention Centre",
-      attendees: "500+ HNI/UHNI",
-      description:
-        "An exclusive showcase of premium brands across fashion, real estate, and lifestyle sectors.",
-      image: "/images/photo-1660486615549-d50a6564e865.jpg",
-      status: "Registration Open",
-    },
-    {
-      title: "Utkrisht Fashion Week",
-      date: "September 10-14, 2026",
-      location: "Vancouver Arts Centre",
-      attendees: "1000+ Attendees",
-      description:
-        "A premier fashion event featuring emerging and established designers from around the world.",
-      image: "/images/photo-1768913640595-104e0170dfee.jpg",
-      status: "Coming Soon",
-    },
-    {
-      title: "Utkrisht Investment Summit",
-      date: "November 8-9, 2026",
-      location: "Montreal Financial District",
-      attendees: "300+ Investors",
-      description:
-        "Connect with leading investors and explore opportunities in real estate and luxury markets.",
-      image: "/images/photo-1768508948485-a7adc1f3427f.jpg",
-      status: "Coming Soon",
-    },
-  ];
+  // Staleness guard: an event disappears from "Upcoming" the day after it ends,
+  // so a lapsed date can never sit here advertising itself as open.
+  const today = new Date().toISOString().slice(0, 10);
+  const upcomingEvents = ALL_UPCOMING.filter((e) => e.endsOn >= today);
 
   const pastEvents = [
     {
@@ -104,6 +126,16 @@ export function Events() {
             </p>
           </motion.div>
 
+          {upcomingEvents.length === 0 && (
+            <p className="text-gray-400 text-lg">
+              Our next season is being finalised.{" "}
+              <Link to="/contact" className="underline hover:text-white">
+                Register your interest
+              </Link>{" "}
+              and we'll let you know as soon as dates are confirmed.
+            </p>
+          )}
+
           <div className="space-y-12">
             {upcomingEvents.map((event, index) => (
               <motion.div
@@ -140,7 +172,7 @@ export function Events() {
                     </div>
                     <div className="flex items-center gap-3 text-gray-400">
                       <Users size={20} />
-                      <span>{event.attendees}</span>
+                      <span>{event.capacity}</span>
                     </div>
                   </div>
 
@@ -216,24 +248,27 @@ export function Events() {
           >
             <h2 className="text-4xl md:text-6xl mb-4">Our Flagship Events</h2>
             <p className="text-gray-400 text-lg max-w-3xl mx-auto">
-              Utkrisht Alliance creates and owns premium event properties that have
-              become cornerstones of the luxury industry calendar
+              Utkrisht Alliance creates and owns its event properties — each built
+              around a distinct audience and a fixed point in the year
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {[
               {
-                name: "Utkrisht Luxury Expo",
-                description: "Annual showcase of premium brands and services",
-              },
-              {
-                name: "Utkrisht Fashion Week",
-                description: "Celebrating creativity and craftsmanship in fashion",
-              },
-              {
                 name: "Utkrisht Investment Summit",
-                description: "Connecting investors with high-value opportunities",
+                description:
+                  "Property and senior living across Dubai and India, each spring",
+              },
+              {
+                name: "Utkrisht Luxury Expo",
+                description:
+                  "Beauty, spirits, education and lifestyle under one roof, each summer",
+              },
+              {
+                name: "Utkrisht Couture",
+                description:
+                  "Designer-led bridal and occasion wear, each autumn",
               },
             ].map((property, index) => (
               <motion.div

@@ -1,7 +1,9 @@
 import { motion } from "motion/react";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import { useSearchParams } from "react-router";
 import { WEB3FORMS_ACCESS_KEY, CONTACT_EMAIL } from "../config";
+import { HCaptchaBox, type HCaptchaHandle } from "../components/HCaptchaBox";
 
 // Builds a pre-filled mailto: link so a lead is never lost, even when the
 // delivery backend isn't configured yet or a submission fails.
@@ -29,13 +31,35 @@ function buildMailtoHref(d: {
   )}&body=${encodeURIComponent(body)}`;
 }
 
+// Values the Partner page deep-links with, so a sponsor lands on a form that
+// already knows why they came.
+const VALID_INTERESTS = [
+  "founding-partnership",
+  "exhibiting",
+  "brand-strategy-consulting",
+  "experiential-events",
+  "exhibitions-trade-platforms",
+  "media-production",
+  "pr-partnerships",
+  "website-development",
+  "social-media-marketing",
+  "brand-licensing-franchising",
+  "advertisement",
+  "other",
+];
+
 export function Contact() {
+  const [searchParams] = useSearchParams();
+  const requestedInterest = searchParams.get("interest") ?? "";
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
     company: "",
-    interest: "",
+    interest: VALID_INTERESTS.includes(requestedInterest)
+      ? requestedInterest
+      : "",
     message: "",
   });
 
@@ -44,8 +68,27 @@ export function Contact() {
   >("idle");
   const [errorMsg, setErrorMsg] = useState("");
 
+  // hCaptcha state. `captchaUnavailable` flips to true if the widget errors or
+  // the script can't load at all — in that case we let the submission through
+  // rather than trapping a real lead behind a broken third-party script.
+  const [captchaToken, setCaptchaToken] = useState("");
+  const [captchaUnavailable, setCaptchaUnavailable] = useState(false);
+  const captchaRef = useRef<HCaptchaHandle>(null);
+
+  const resetCaptcha = () => {
+    setCaptchaToken("");
+    captchaRef.current?.reset();
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (!captchaUnavailable && !captchaToken) {
+      setStatus("error");
+      setErrorMsg("Please complete the verification below before sending.");
+      return;
+    }
+
     setStatus("submitting");
     setErrorMsg("");
 
@@ -61,7 +104,11 @@ export function Contact() {
           },
           body: JSON.stringify({
             access_key: WEB3FORMS_ACCESS_KEY,
-            subject: `New inquiry from ${formData.name} — Utkrisht Alliance`,
+            subject:
+              formData.interest === "founding-partnership" ||
+              formData.interest === "exhibiting"
+                ? `PARTNERSHIP — ${formData.name} — Utkrisht Alliance`
+                : `New inquiry from ${formData.name} — Utkrisht Alliance`,
             from_name: "Utkrisht Alliance Website",
             name: formData.name,
             email: formData.email,
@@ -69,6 +116,7 @@ export function Contact() {
             company: formData.company,
             interest: formData.interest,
             message: formData.message,
+            "h-captcha-response": captchaToken,
           }),
         });
         const data = await response.json();
@@ -82,6 +130,7 @@ export function Contact() {
             interest: "",
             message: "",
           });
+          resetCaptcha();
           return;
         }
         // Backend reachable but rejected — fall through to the email fallback.
@@ -94,6 +143,7 @@ export function Contact() {
     // app with the inquiry pre-filled so the lead is never silently lost.
     window.location.href = buildMailtoHref(formData);
     setStatus("fallback");
+    resetCaptcha();
   };
 
   const handleChange = (
@@ -209,6 +259,8 @@ export function Contact() {
                     className="w-full px-4 py-3 bg-black border border-zinc-700 focus:border-white outline-none transition-colors"
                   >
                     <option value="">Select an option</option>
+                    <option value="founding-partnership">Founding Partnership / Sponsorship</option>
+                    <option value="exhibiting">Exhibiting</option>
                     <option value="brand-strategy-consulting">Brand Strategy &amp; Consulting</option>
                     <option value="experiential-events">Experiential Events</option>
                     <option value="exhibitions-trade-platforms">Exhibitions &amp; Trade Platforms</option>
@@ -246,6 +298,21 @@ export function Contact() {
                   tabIndex={-1}
                   autoComplete="off"
                 />
+
+                {/* hCaptcha — hidden entirely if the widget can't load, so a
+                    broken script never blocks a genuine inquiry */}
+                {!captchaUnavailable && (
+                  <HCaptchaBox
+                    ref={captchaRef}
+                    onVerify={(token) => {
+                      setCaptchaToken(token);
+                      if (status === "error") setStatus("idle");
+                    }}
+                    onExpire={() => setCaptchaToken("")}
+                    onUnavailable={() => setCaptchaUnavailable(true)}
+                    className="min-h-[78px]"
+                  />
+                )}
 
                 <button
                   type="submit"

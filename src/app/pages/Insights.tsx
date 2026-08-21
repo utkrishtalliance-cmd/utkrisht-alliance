@@ -1,10 +1,11 @@
 import { motion } from "motion/react";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Calendar, User, ArrowRight } from "lucide-react";
 import { Link } from "react-router";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { insights } from "../data/insights";
 import { WEB3FORMS_ACCESS_KEY } from "../config";
+import { HCaptchaBox, type HCaptchaHandle } from "../components/HCaptchaBox";
 
 export function Insights() {
   const featured = insights.find((a) => a.featured) ?? insights[0];
@@ -15,9 +16,23 @@ export function Insights() {
     "idle" | "submitting" | "success" | "error"
   >("idle");
 
+  // hCaptcha. If the widget can't load we let the signup through rather than
+  // silently blocking subscribers behind a third-party script.
+  const [captchaToken, setCaptchaToken] = useState("");
+  const [captchaUnavailable, setCaptchaUnavailable] = useState(false);
+  const [captchaMsg, setCaptchaMsg] = useState("");
+  const captchaRef = useRef<HCaptchaHandle>(null);
+
   const handleSubscribe = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email) return;
+
+    if (!captchaUnavailable && !captchaToken) {
+      setCaptchaMsg("Please complete the verification below.");
+      return;
+    }
+
+    setCaptchaMsg("");
     setSubStatus("submitting");
     try {
       const res = await fetch("https://api.web3forms.com/submit", {
@@ -32,6 +47,7 @@ export function Insights() {
           from_name: "Utkrisht Alliance Website",
           email,
           message: `Newsletter signup: ${email}`,
+          "h-captcha-response": captchaToken,
         }),
       });
       const data = await res.json();
@@ -43,6 +59,10 @@ export function Insights() {
       }
     } catch {
       setSubStatus("error");
+    } finally {
+      // The token is single-use, so clear it whichever way the request went.
+      setCaptchaToken("");
+      captchaRef.current?.reset();
     }
   };
 
@@ -214,6 +234,25 @@ export function Insights() {
                 {subStatus === "submitting" ? "Subscribing..." : "Subscribe"}
               </button>
             </form>
+
+            {!captchaUnavailable && (
+              <div className="mt-6 flex justify-center">
+                <HCaptchaBox
+                  ref={captchaRef}
+                  onVerify={(token) => {
+                    setCaptchaToken(token);
+                    setCaptchaMsg("");
+                  }}
+                  onExpire={() => setCaptchaToken("")}
+                  onUnavailable={() => setCaptchaUnavailable(true)}
+                  className="min-h-[78px]"
+                />
+              </div>
+            )}
+
+            {captchaMsg && (
+              <p className="text-red-400 text-sm mt-4">{captchaMsg}</p>
+            )}
 
             {subStatus === "success" && (
               <p className="text-green-400 text-sm mt-6">

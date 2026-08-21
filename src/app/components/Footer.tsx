@@ -9,9 +9,9 @@ export function Footer() {
           {/* Brand */}
           <div>
             <img
-              src="/utkrisht-logo.png"
+              src="/utkrisht-logo-wide.webp"
               alt="Utkrisht Alliance"
-              className="h-28 w-auto rounded-xl ring-1 ring-white/10 mb-5"
+              className="h-12 md:h-14 w-auto rounded-lg ring-1 ring-white/10 mb-5"
             />
             <p className="text-gray-400 text-sm leading-relaxed">
               A premier media & events company connecting luxury brands with high-value audiences worldwide.
@@ -61,7 +61,7 @@ export function Footer() {
 
         <div className="border-t border-zinc-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-gray-400 text-sm">
-            © 2026 Utkrisht Alliance. All rights reserved.
+            © {new Date().getFullYear()} Utkrisht Alliance. All rights reserved.
           </p>
           <div className="flex gap-6">
             <a
