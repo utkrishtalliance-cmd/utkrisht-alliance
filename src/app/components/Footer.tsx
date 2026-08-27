@@ -11,7 +11,7 @@ export function Footer() {
             <img
               src="/utkrisht-logo-wide.webp"
               alt="Utkrisht Alliance"
-              className="h-12 md:h-14 w-auto rounded-lg ring-1 ring-white/10 mb-5"
+              className="h-12 md:h-14 w-auto mb-5"
             />
             <p className="text-gray-400 text-sm leading-relaxed">
               A premier media & events company connecting luxury brands with high-value audiences worldwide.
