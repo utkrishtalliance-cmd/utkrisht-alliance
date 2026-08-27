@@ -77,6 +77,17 @@ export function Home() {
         </div>
         
         <div className="container mx-auto px-6 z-20 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="flex flex-col items-center gap-4 mb-8"
+          >
+            <span className="h-px w-14 bg-[#c7a468]" />
+            <span className="text-xs md:text-sm tracking-[0.35em] uppercase text-[#c7a468]">
+              Founding Season · 2026–27
+            </span>
+          </motion.div>
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -94,8 +105,10 @@ export function Home() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-lg md:text-xl text-gray-300 mb-12 max-w-3xl mx-auto"
           >
-            A premier media & events company connecting luxury brands with
-            high-value audiences worldwide.
+            A media &amp; events house connecting luxury brands with the audiences
+            that matter most — where excellence meets{" "}
+            <span className="text-[#e6d0a1]">jalsa</span>, and every moment is
+            built to leave an impact.
           </motion.p>
 
           <motion.div
@@ -157,6 +170,7 @@ export function Home() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
+            <span className="mx-auto mb-6 block h-px w-14 bg-[#c7a468]" />
             <h2 className="text-4xl md:text-6xl mb-4">Signature Experiences</h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
               Creating unforgettable moments that connect brands with their ideal audiences
@@ -189,8 +203,45 @@ export function Home() {
         </div>
       </section>
 
-      {/* Why Utkrisht Alliance */}
+      {/* Who We Partner With */}
       <section className="py-24">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-14"
+          >
+            <span className="mx-auto mb-6 block h-px w-14 bg-[#c7a468]" />
+            <h2 className="text-4xl md:text-6xl mb-4">Who We Partner With</h2>
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              We work with brands and institutions whose audiences are discerning,
+              high-value, and hard to reach through advertising alone.
+            </p>
+          </motion.div>
+          <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
+            {[
+              "Luxury Brands",
+              "Real Estate & Developers",
+              "Fashion Houses",
+              "Spirits & Lifestyle",
+              "Hospitality",
+              "HNI / UHNI Audiences",
+            ].map((v) => (
+              <span
+                key={v}
+                className="px-5 py-2 border border-zinc-700 rounded-full text-sm text-gray-300 uppercase tracking-wider"
+              >
+                {v}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Utkrisht Alliance */}
+      <section className="py-24 bg-zinc-950">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -199,6 +250,7 @@ export function Home() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
+            <span className="mx-auto mb-6 block h-px w-14 bg-[#c7a468]" />
             <h2 className="text-4xl md:text-6xl mb-4">Why Utkrisht Alliance</h2>
           </motion.div>
 
@@ -223,26 +275,74 @@ export function Home() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-24 bg-zinc-950">
+      {/* How We Work */}
+      <section className="py-24">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-14"
+          >
+            <span className="mx-auto mb-6 block h-px w-14 bg-[#c7a468]" />
+            <h2 className="text-4xl md:text-6xl mb-4">How We Work</h2>
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              A disciplined path from first conversation to measurable impact.
+            </p>
+          </motion.div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
+            {[
+              { n: "01", t: "Discovery", d: "We learn your brand, your goals, and the audience you want in the room." },
+              { n: "02", t: "Strategy", d: "We design the concept, format, and guest experience around that intent." },
+              { n: "03", t: "Execution", d: "We produce every detail end to end — media, moments, and logistics." },
+              { n: "04", t: "Impact", d: "We measure what mattered and turn it into lasting relationships." },
+            ].map((s, index) => (
+              <motion.div
+                key={s.t}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+              >
+                <div className="text-[#c7a468] text-sm tracking-[0.3em] mb-3">{s.n}</div>
+                <h3 className="text-xl mb-2">{s.t}</h3>
+                <p className="text-gray-400 text-sm leading-relaxed">{s.d}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Founding Season — closing invitation */}
+      <section className="py-28 bg-zinc-950">
         <div className="container mx-auto px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+            className="max-w-3xl mx-auto"
           >
-            <h2 className="text-4xl md:text-6xl mb-6">
-              Let's Create Something Exceptional
-            </h2>
-            <p className="text-gray-400 text-lg mb-12 max-w-2xl mx-auto">
-              Partner with us to deliver world-class experiences that resonate with your audience
+            <span className="mx-auto mb-6 block h-px w-14 bg-[#c7a468]" />
+            <span className="text-xs tracking-[0.3em] uppercase text-[#c7a468]">
+              Founding Season · 2026–27
+            </span>
+            <h2 className="text-4xl md:text-6xl mt-4 mb-6">Get in at the founding</h2>
+            <p className="text-gray-300 text-lg leading-relaxed mb-4">
+              We're a new house, and we're building deliberately. Our founding
+              season is a limited first chapter — a small series of curated events
+              and a select circle of founding partners.
+            </p>
+            <p className="text-gray-400 leading-relaxed mb-12">
+              It's the ground floor, and the best seat we'll ever offer. If you want
+              your brand in these rooms from the very first, this is the moment.
             </p>
             <Link
               to="/partner"
               className="px-12 py-5 bg-white text-black hover:bg-gray-200 transition-colors text-sm uppercase tracking-wider inline-flex items-center gap-2"
             >
-              Partner With Us
+              Become a Founding Partner
               <ArrowRight size={16} />
             </Link>
           </motion.div>
