@@ -1,7 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import App from "./app/App";
-import "@fontsource-variable/montserrat";
+import "@fontsource-variable/bodoni-moda";
 import "@fontsource/pt-sans/400.css";
 import "@fontsource/pt-sans/700.css";
 import "./styles/index.css";
