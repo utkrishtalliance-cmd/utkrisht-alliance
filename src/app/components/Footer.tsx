@@ -44,20 +44,20 @@ export function Footer() {
               <Link to="/fashion-shows" className="text-gray-400 hover:text-white text-sm transition-colors">
                 Fashion Shows
               </Link>
-              <Link to="/luxury-real-estate" className="text-gray-400 hover:text-white text-sm transition-colors">
-                Luxury Real Estate
-              </Link>
-              <Link to="/networking-events" className="text-gray-400 hover:text-white text-sm transition-colors">
-                Invite-Only Networking
+              <Link to="/arts-architecture" className="text-gray-400 hover:text-white text-sm transition-colors">
+                Arts &amp; Architecture
               </Link>
               <Link to="/brand-showcases" className="text-gray-400 hover:text-white text-sm transition-colors">
                 Brand Showcases
               </Link>
+              <Link to="/luxury-real-estate" className="text-gray-400 hover:text-white text-sm transition-colors">
+                Luxury Real Estate
+              </Link>
               <Link to="/whisky-spirits" className="text-gray-400 hover:text-white text-sm transition-colors">
                 Whisky &amp; Spirits Salons
               </Link>
-              <Link to="/arts-architecture" className="text-gray-400 hover:text-white text-sm transition-colors">
-                Arts &amp; Architecture
+              <Link to="/networking-events" className="text-gray-400 hover:text-white text-sm transition-colors">
+                Invite-Only Networking
               </Link>
             </div>
           </div>
