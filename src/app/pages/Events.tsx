@@ -74,6 +74,17 @@ const ALL_UPCOMING: UpcomingEvent[] = [
     status: "Save the Date",
   },
   {
+    title: "Utkrisht Salon des Arts",
+    endsOn: "2027-10-23",
+    date: "Saturday, October 23, 2027",
+    location: "Toronto, Ontario — venue to be announced",
+    capacity: "100–120 guests · by invitation",
+    description:
+      "An evening for fine art, design and architecture — a curated hang of painters and makers alongside the collectors and design-led homes that acquire them. Timed to Toronto's autumn art season.",
+    image: "/images/arts-architecture.jpg",
+    status: "Save the Date",
+  },
+  {
     title: "Utkrisht Couture",
     endsOn: "2027-11-06",
     date: "Saturday, November 6, 2027",
@@ -82,6 +93,17 @@ const ALL_UPCOMING: UpcomingEvent[] = [
     description:
       "An invitation-only bridal and occasion-wear showcase with private appointment suites, timed nine to twelve months ahead of the 2028 wedding season so commissions have room to be made.",
     image: "/images/photo-1773745060497-4cc1df774c72.jpg",
+    status: "Save the Date",
+  },
+  {
+    title: "Jalsa — The Founding Gala",
+    endsOn: "2027-12-04",
+    date: "Saturday, December 4, 2027",
+    location: "Toronto, Ontario — venue to be announced",
+    capacity: "300–450 guests · black tie",
+    description:
+      "The founding season's finale — a black-tie Jalsa bringing together the founding partners, guests and talent of the first year. Excellence, Jalsa, impact, under one roof.",
+    image: "/images/founding-gala.jpg",
     status: "Save the Date",
   },
 ];
