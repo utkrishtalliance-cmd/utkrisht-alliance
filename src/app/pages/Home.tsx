@@ -257,9 +257,12 @@ export function Home() {
           <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
             {[
               "Luxury Brands",
-              "Real Estate & Developers",
               "Fashion Houses",
-              "Spirits & Lifestyle",
+              "Artists & Galleries",
+              "Design & Architecture",
+              "Real Estate & Developers",
+              "Spirits & Distilleries",
+              "Private Members' Clubs",
               "Hospitality",
               "HNI / UHNI Audiences",
             ].map((v) => (
