@@ -9,6 +9,7 @@ import { Media } from "./pages/Media";
 import { Insights } from "./pages/Insights";
 import { InsightArticle } from "./pages/InsightArticle";
 import { Contact } from "./pages/Contact";
+import { Creators } from "./pages/Creators";
 import { SHOW_MEDIA_PAGE } from "./featureFlags";
 
 export const router = createBrowserRouter([
@@ -29,6 +30,7 @@ export const router = createBrowserRouter([
       },
       { path: "insights", Component: Insights },
       { path: "insights/:slug", Component: InsightArticle },
+      { path: "creators", Component: Creators },
       { path: "contact", Component: Contact },
     ],
   },

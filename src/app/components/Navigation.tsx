@@ -42,6 +42,7 @@ export function Navigation() {
     { to: "/partner", label: "Partner With Us" },
     { to: "/media", label: "Media" },
     { to: "/insights", label: "Insights" },
+    { to: "/creators", label: "Creators" },
     { to: "/contact", label: "Contact" },
   ].filter((link) => SHOW_MEDIA_PAGE || link.to !== "/media");
 
