@@ -44,9 +44,9 @@ export function Home() {
       image: "/images/whisky-salon.jpg",
     },
     {
-      title: "Private Dining & Chef's Table",
-      description: "Bespoke culinary evenings with acclaimed chefs and rare pairings",
-      image: "/images/private-dining.jpg",
+      title: "Art & Cultural Galas",
+      description: "Galas and showcases celebrating art, heritage, and culture",
+      image: "/images/art-cultural-gala.jpg",
     },
   ];
 
