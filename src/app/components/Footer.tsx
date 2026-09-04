@@ -34,6 +34,9 @@ export function Footer() {
               <Link to="/partner" className="text-gray-400 hover:text-white text-sm transition-colors">
                 Partner With Us
               </Link>
+              <Link to="/arts-architecture" className="text-gray-400 hover:text-white text-sm transition-colors">
+                Arts &amp; Architecture
+              </Link>
             </div>
           </div>
 

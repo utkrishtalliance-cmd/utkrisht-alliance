@@ -36,6 +36,7 @@ function buildMailtoHref(d: {
 const VALID_INTERESTS = [
   "founding-partnership",
   "exhibiting",
+  "arts-architecture",
   "brand-strategy-consulting",
   "experiential-events",
   "exhibitions-trade-platforms",
@@ -108,6 +109,8 @@ export function Contact() {
               formData.interest === "founding-partnership" ||
               formData.interest === "exhibiting"
                 ? `PARTNERSHIP — ${formData.name} — Utkrisht Alliance`
+                : formData.interest === "arts-architecture"
+                ? `ARTS & ARCHITECTURE — ${formData.name} — Utkrisht Alliance`
                 : `New inquiry from ${formData.name} — Utkrisht Alliance`,
             from_name: "Utkrisht Alliance Website",
             name: formData.name,
@@ -261,6 +264,7 @@ export function Contact() {
                     <option value="">Select an option</option>
                     <option value="founding-partnership">Founding Partnership / Sponsorship</option>
                     <option value="exhibiting">Exhibiting</option>
+                    <option value="arts-architecture">Arts &amp; Architecture</option>
                     <option value="brand-strategy-consulting">Brand Strategy &amp; Consulting</option>
                     <option value="experiential-events">Experiential Events</option>
                     <option value="exhibitions-trade-platforms">Exhibitions &amp; Trade Platforms</option>

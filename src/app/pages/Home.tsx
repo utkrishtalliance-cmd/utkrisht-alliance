@@ -17,7 +17,12 @@ export function Home() {
     "Luxury Consulting",
   ];
 
-  const experiences = [
+  const experiences: {
+    title: string;
+    description: string;
+    image: string;
+    to?: string;
+  }[] = [
     {
       title: "Fashion Shows",
       description: "Curated runway experiences for luxury brands",
@@ -47,6 +52,7 @@ export function Home() {
       title: "Arts & Architecture",
       description: "Curated showcases spanning fine art, design, and luxury living spaces",
       image: "/images/arts-architecture.jpg",
+      to: "/arts-architecture",
     },
   ];
 
@@ -203,9 +209,22 @@ export function Home() {
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
+                {exp.to && (
+                  <Link
+                    to={exp.to}
+                    aria-label={`${exp.title} — learn more`}
+                    className="absolute inset-0 z-10"
+                  />
+                )}
                 <div className="absolute bottom-0 left-0 right-0 p-8">
                   <h3 className="text-2xl mb-2">{exp.title}</h3>
                   <p className="text-gray-300 text-sm">{exp.description}</p>
+                  {exp.to && (
+                    <span className="mt-3 inline-flex items-center gap-1 text-xs uppercase tracking-wider text-[#c7a468]">
+                      Explore
+                      <ArrowRight size={12} />
+                    </span>
+                  )}
                 </div>
               </motion.div>
             ))}
