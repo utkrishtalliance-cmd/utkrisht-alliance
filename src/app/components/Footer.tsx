@@ -68,17 +68,34 @@ export function Footer() {
             <div className="flex flex-col gap-3">
               <div className="flex items-start gap-2 text-gray-400 text-sm">
                 <MapPin size={16} className="mt-1 flex-shrink-0" />
-                <span>Canada (Operating Globally)</span>
+                <span>
+                  Toronto, Ontario, Canada
+                  <span className="block text-gray-500 text-xs mt-1">
+                    Operating globally across North America, Europe &amp; Asia
+                  </span>
+                </span>
               </div>
-              <div className="flex items-center gap-2 text-gray-400 text-sm">
-                <Mail size={16} />
-                <span>info@utkrishtalliance.com</span>
+              <div className="flex items-start gap-2 text-gray-400 text-sm">
+                <Mail size={16} className="mt-1 flex-shrink-0" />
+                <span className="flex flex-col">
+                  <a href="mailto:info@utkrishtalliance.com" className="hover:text-white transition-colors">
+                    info@utkrishtalliance.com
+                  </a>
+                  <a href="mailto:partnerships@utkrishtalliance.com" className="hover:text-white transition-colors">
+                    partnerships@utkrishtalliance.com
+                  </a>
+                </span>
               </div>
-              <div className="flex items-center gap-2 text-gray-400 text-sm">
-                <Phone size={16} />
-                <a href="tel:+16399160639" className="hover:text-white transition-colors">
-                  +1 (639) 916-0639
-                </a>
+              <div className="flex items-start gap-2 text-gray-400 text-sm">
+                <Phone size={16} className="mt-1 flex-shrink-0" />
+                <span>
+                  <a href="tel:+16399160639" className="hover:text-white transition-colors">
+                    +1 (639) 916-0639
+                  </a>
+                  <span className="block text-gray-500 text-xs mt-1">
+                    Mon–Fri, 9:00 AM – 6:00 PM EST
+                  </span>
+                </span>
               </div>
             </div>
           </div>
