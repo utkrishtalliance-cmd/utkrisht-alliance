@@ -41,14 +41,14 @@ export function Footer() {
           <div>
             <h4 className="text-sm uppercase tracking-wider mb-4">Signature Experiences</h4>
             <div className="flex flex-col gap-3">
+              <Link to="/brand-showcases" className="text-gray-400 hover:text-white text-sm transition-colors">
+                Brand Showcases
+              </Link>
               <Link to="/fashion-shows" className="text-gray-400 hover:text-white text-sm transition-colors">
                 Fashion Shows
               </Link>
               <Link to="/arts-architecture" className="text-gray-400 hover:text-white text-sm transition-colors">
                 Arts &amp; Architecture
-              </Link>
-              <Link to="/brand-showcases" className="text-gray-400 hover:text-white text-sm transition-colors">
-                Brand Showcases
               </Link>
               <Link to="/luxury-real-estate" className="text-gray-400 hover:text-white text-sm transition-colors">
                 Luxury Real Estate

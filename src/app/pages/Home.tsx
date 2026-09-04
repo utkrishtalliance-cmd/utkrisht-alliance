@@ -24,6 +24,12 @@ export function Home() {
     to?: string;
   }[] = [
     {
+      title: "Brand Showcases",
+      description: "Immersive experiences that elevate brands",
+      image: "/images/photo-1769509456084-dacd3cde0e20.jpg",
+      to: "/brand-showcases",
+    },
+    {
       title: "Fashion Shows",
       description: "Curated runway experiences for luxury brands",
       image: "/images/photo-1768913640595-104e0170dfee.jpg",
@@ -34,12 +40,6 @@ export function Home() {
       description: "Curated showcases spanning fine art, design, and luxury living spaces",
       image: "/images/arts-architecture.jpg",
       to: "/arts-architecture",
-    },
-    {
-      title: "Brand Showcases",
-      description: "Immersive experiences that elevate brands",
-      image: "/images/photo-1769509456084-dacd3cde0e20.jpg",
-      to: "/brand-showcases",
     },
     {
       title: "Luxury Real Estate Exhibitions",
