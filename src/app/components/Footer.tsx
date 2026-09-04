@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import { Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react";
+import { Instagram, Linkedin, Youtube, Mail, MapPin, Phone } from "lucide-react";
 
 export function Footer() {
   return (
@@ -81,6 +81,15 @@ export function Footer() {
               className="text-gray-400 hover:text-white transition-colors"
             >
               <Linkedin size={20} />
+            </a>
+            <a
+              href="https://www.youtube.com/@UtkrishtAlliance"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Utkrisht Alliance on YouTube"
+              className="text-gray-400 hover:text-white transition-colors"
+            >
+              <Youtube size={20} />
             </a>
             <a
               href="mailto:info@utkrishtalliance.com"
