@@ -44,9 +44,9 @@ export function Home() {
       image: "/images/whisky-salon.jpg",
     },
     {
-      title: "Art & Cultural Galas",
-      description: "Galas and showcases celebrating art, heritage, and culture",
-      image: "/images/art-cultural-gala.jpg",
+      title: "Arts & Architecture",
+      description: "Curated showcases spanning fine art, design, and luxury living spaces",
+      image: "/images/arts-architecture.jpg",
     },
   ];
 
