@@ -8,9 +8,10 @@ export const SEGMENTS: Record<string, SegmentContent> = {
     "slug": "fashion-shows",
     "heroImage": "/images/photo-1768913640595-104e0170dfee.jpg",
     "hero": {
-      "eyebrow": "Fashion Shows",
+      "eyebrow": "Fashion Shows · Founding Season 2026–27",
       "headline": "A runway measured by who is in the seats.",
-      "subcopy": "Utkrisht Alliance stages curated runway showcases for couture houses, emerging designers, and the jewellery and lifestyle labels that dress a discerning South Asian and NRI audience. A founding season, composed with intention — the room reviewed, the coverage earned, the introductions made only with consent."
+      "subcopy": "Utkrisht Alliance stages curated runway showcases for couture houses, emerging designers, and the jewellery and lifestyle labels that dress a discerning South Asian and NRI audience. A founding season, composed with intention — the room reviewed, the coverage earned, the introductions made only with consent.",
+      "footnote": "A limited number of founding placements for the 2026–27 season."
     },
     "sections": [
       {
@@ -161,7 +162,7 @@ export const SEGMENTS: Record<string, SegmentContent> = {
         "heading": "Take your place on the runway.",
         "subcopy": "Placement in the founding season is by selection and limited by design. If your house belongs before this room, we would be glad to begin the conversation.",
         "ctaLabel": "Enquire about a placement",
-        "secondaryCtaLabel": "Request the founding-season brief"
+        "secondaryCtaLabel": "Our approach"
       }
     ]
   },
@@ -318,9 +319,10 @@ export const SEGMENTS: Record<string, SegmentContent> = {
     "slug": "networking-events",
     "heroImage": "/images/photo-1768508948485-a7adc1f3427f.jpg",
     "hero": {
-      "eyebrow": "Invite-Only Networking Events",
+      "eyebrow": "Invite-Only Networking Events · Founding Season 2026–27",
       "headline": "A room worth being in.",
-      "subcopy": "Private, invitation-only evenings for a vetted circle of HNI and NRI guests. We curate the room by registration and review, host your brand with discretion, and make introductions only where both sides consent."
+      "subcopy": "Private, invitation-only evenings for a vetted circle of HNI and NRI guests. We curate the room by registration and review, host your brand with discretion, and make introductions only where both sides consent.",
+      "footnote": "A limited number of founding host positions for the 2026–27 season."
     },
     "sections": [
       {
@@ -494,7 +496,7 @@ export const SEGMENTS: Record<string, SegmentContent> = {
         "heading": "Host an evening worth the invitation.",
         "subcopy": "Tell us who you would like to be in a room with. We will show you how we build it — discreetly, and by consent.",
         "ctaLabel": "Enquire about hosting",
-        "secondaryCtaLabel": "Request the room profile"
+        "secondaryCtaLabel": "Our approach"
       }
     ]
   },
@@ -502,9 +504,10 @@ export const SEGMENTS: Record<string, SegmentContent> = {
     "slug": "brand-showcases",
     "heroImage": "/images/photo-1769509456084-dacd3cde0e20.jpg",
     "hero": {
-      "eyebrow": "Brand Showcases",
+      "eyebrow": "Brand Showcases · Founding Season 2026–27",
       "headline": "Your brand, staged as an experience.",
-      "subcopy": "For the automotive, watch and jewellery, fashion, travel, and premium lifestyle houses seeking an immersive presence before a curated South Asian and NRI luxury audience. We design the moment, produce it with care, and carry its story beyond the room."
+      "subcopy": "For the automotive, watch and jewellery, fashion, travel, and premium lifestyle houses seeking an immersive presence before a curated South Asian and NRI luxury audience. We design the moment, produce it with care, and carry its story beyond the room.",
+      "footnote": "A limited number of founding showcases for the 2026–27 season."
     },
     "sections": [
       {
@@ -686,7 +689,7 @@ export const SEGMENTS: Record<string, SegmentContent> = {
         "heading": "Bring your brand into the Jalsa.",
         "subcopy": "We are curating the houses for our founding season now, and placements are limited by design. Tell us about your brand, and we will design the room around it.",
         "ctaLabel": "Enquire about a showcase",
-        "secondaryCtaLabel": "Speak with our team"
+        "secondaryCtaLabel": "Our approach"
       }
     ]
   },
@@ -694,9 +697,10 @@ export const SEGMENTS: Record<string, SegmentContent> = {
     "slug": "whisky-spirits",
     "heroImage": "/images/whisky-salon.jpg",
     "hero": {
-      "eyebrow": "Whisky & Spirits Salons",
+      "eyebrow": "Whisky & Spirits Salons · Founding Season 2026–27",
       "headline": "Rare spirits, poured for the few who came to listen.",
-      "subcopy": "Intimate curated salons of single malts and small-batch spirits — distillery and brand storytelling for collectors and connoisseurs, in a room assembled by invitation. This is a founding season: we offer the audience and the craft, not figures we have not yet earned."
+      "subcopy": "Intimate curated salons of single malts and small-batch spirits — distillery and brand storytelling for collectors and connoisseurs, in a room assembled by invitation. This is a founding season: we offer the audience and the craft, not figures we have not yet earned.",
+      "footnote": "A limited number of founding salons for the 2026–27 season."
     },
     "sections": [
       {
@@ -714,7 +718,7 @@ export const SEGMENTS: Record<string, SegmentContent> = {
       },
       {
         "kind": "cards",
-        "eyebrow": "What we salon",
+        "eyebrow": "What we pour",
         "icon": "Gem",
         "heading": "The spirits, and the stories, we bring to the table.",
         "subcopy": "Each salon is composed, not stocked. We showcase a small number of pours and give each the room to be understood.",
@@ -873,7 +877,7 @@ export const SEGMENTS: Record<string, SegmentContent> = {
         "heading": "Reserve a place at the first tastings.",
         "subcopy": "Our founding season is small by design, and salons are curated by theme and confirmed by application. If your single malt or small-batch spirit belongs before this room, we would be glad to talk.",
         "ctaLabel": "Enquire about a salon",
-        "secondaryCtaLabel": "Request the season overview"
+        "secondaryCtaLabel": "Our approach"
       }
     ]
   }
