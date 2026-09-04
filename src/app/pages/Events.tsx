@@ -86,12 +86,12 @@ const ALL_UPCOMING: UpcomingEvent[] = [
   },
   {
     title: "Utkrisht Couture",
-    endsOn: "2027-11-06",
-    date: "Saturday, November 6, 2027",
+    endsOn: "2027-08-28",
+    date: "Saturday, August 28, 2027",
     location: "Toronto, Ontario — venue to be announced",
     capacity: "350–500 guests · 12–18 designers",
     description:
-      "An invitation-only bridal and occasion-wear showcase with private appointment suites, timed nine to twelve months ahead of the 2028 wedding season so commissions have room to be made.",
+      "An invitation-only bridal and occasion-wear showcase with private appointment suites, timed for late summer so pieces can be commissioned in good time for the festive season and the winter wedding calendar.",
     image: "/images/photo-1773745060497-4cc1df774c72.jpg",
     status: "Save the Date",
   },
@@ -323,7 +323,7 @@ export function Events() {
               {
                 name: "Utkrisht Couture",
                 description:
-                  "Designer-led bridal and occasion wear, each autumn",
+                  "Designer-led bridal and occasion wear, ahead of the festive season",
               },
             ].map((property, index) => (
               <motion.div
