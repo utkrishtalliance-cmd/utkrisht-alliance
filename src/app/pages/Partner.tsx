@@ -30,7 +30,7 @@ const AUDIENCE_STATS: Stat[] = [
   {
     value: "C$14.6B",
     label:
-      "Projected size of India's senior living market by 2030 (₹1 lakh crore) — up from ~C$4.4B today (₹30,000 crore) at 1.3% penetration",
+      "Projected size of India's senior living market by 2030 (INR 1 lakh crore) — up from ~C$4.4B today (INR 30,000 crore) at 1.3% penetration",
     source: "Colliers India, August 2026",
   },
   {
