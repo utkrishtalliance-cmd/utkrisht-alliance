@@ -87,7 +87,7 @@ export function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen flex justify-center [align-items:safe_center] overflow-hidden pt-32 pb-16">
         <div className="absolute inset-0 bg-gradient-to-b from-black via-black/80 to-black z-10" />
         <div className="absolute inset-0">
           <ImageWithFallback
