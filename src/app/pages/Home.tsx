@@ -27,26 +27,31 @@ export function Home() {
       title: "Fashion Shows",
       description: "Curated runway experiences for luxury brands",
       image: "/images/photo-1768913640595-104e0170dfee.jpg",
+      to: "/fashion-shows",
     },
     {
       title: "Luxury Real Estate Exhibitions",
       description: "Premium property showcases for investors",
       image: "/images/photo-1660486615549-d50a6564e865.jpg",
+      to: "/luxury-real-estate",
     },
     {
       title: "Invite-Only Networking Events",
       description: "Exclusive connections for high-value audiences",
       image: "/images/photo-1768508948485-a7adc1f3427f.jpg",
+      to: "/networking-events",
     },
     {
       title: "Brand Showcases",
       description: "Immersive experiences that elevate brands",
       image: "/images/photo-1769509456084-dacd3cde0e20.jpg",
+      to: "/brand-showcases",
     },
     {
       title: "Whisky & Spirits Salons",
       description: "Curated tastings of rare single malts and small-batch spirits",
       image: "/images/whisky-salon.jpg",
+      to: "/whisky-spirits",
     },
     {
       title: "Arts & Architecture",

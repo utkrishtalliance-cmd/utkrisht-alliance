@@ -11,6 +11,8 @@ import { InsightArticle } from "./pages/InsightArticle";
 import { Contact } from "./pages/Contact";
 import { Creators } from "./pages/Creators";
 import { ArtsArchitecture } from "./pages/ArtsArchitecture";
+import { SegmentPage } from "./components/SegmentPage";
+import { SEGMENTS } from "./data/segments";
 import { SHOW_MEDIA_PAGE } from "./featureFlags";
 
 export const router = createBrowserRouter([
@@ -33,6 +35,11 @@ export const router = createBrowserRouter([
       { path: "insights/:slug", Component: InsightArticle },
       { path: "creators", Component: Creators },
       { path: "arts-architecture", Component: ArtsArchitecture },
+      { path: "fashion-shows", element: <SegmentPage content={SEGMENTS["fashion-shows"]} /> },
+      { path: "luxury-real-estate", element: <SegmentPage content={SEGMENTS["luxury-real-estate"]} /> },
+      { path: "networking-events", element: <SegmentPage content={SEGMENTS["networking-events"]} /> },
+      { path: "brand-showcases", element: <SegmentPage content={SEGMENTS["brand-showcases"]} /> },
+      { path: "whisky-spirits", element: <SegmentPage content={SEGMENTS["whisky-spirits"]} /> },
       { path: "contact", Component: Contact },
     ],
   },

@@ -37,6 +37,11 @@ const VALID_INTERESTS = [
   "founding-partnership",
   "exhibiting",
   "arts-architecture",
+  "fashion-shows",
+  "luxury-real-estate",
+  "networking-events",
+  "brand-showcases",
+  "whisky-spirits",
   "brand-strategy-consulting",
   "experiential-events",
   "exhibitions-trade-platforms",
@@ -48,6 +53,19 @@ const VALID_INTERESTS = [
   "advertisement",
   "other",
 ];
+
+// Interests that get a distinct, triage-friendly subject prefix in the inbox.
+// Anything not listed falls back to the generic "New inquiry" subject.
+const SUBJECT_PREFIX: Record<string, string> = {
+  "founding-partnership": "PARTNERSHIP",
+  exhibiting: "PARTNERSHIP",
+  "arts-architecture": "ARTS & ARCHITECTURE",
+  "fashion-shows": "FASHION SHOWS",
+  "luxury-real-estate": "LUXURY REAL ESTATE",
+  "networking-events": "NETWORKING EVENTS",
+  "brand-showcases": "BRAND SHOWCASES",
+  "whisky-spirits": "WHISKY & SPIRITS",
+};
 
 export function Contact() {
   const [searchParams] = useSearchParams();
@@ -105,13 +123,9 @@ export function Contact() {
           },
           body: JSON.stringify({
             access_key: WEB3FORMS_ACCESS_KEY,
-            subject:
-              formData.interest === "founding-partnership" ||
-              formData.interest === "exhibiting"
-                ? `PARTNERSHIP — ${formData.name} — Utkrisht Alliance`
-                : formData.interest === "arts-architecture"
-                ? `ARTS & ARCHITECTURE — ${formData.name} — Utkrisht Alliance`
-                : `New inquiry from ${formData.name} — Utkrisht Alliance`,
+            subject: SUBJECT_PREFIX[formData.interest]
+              ? `${SUBJECT_PREFIX[formData.interest]} — ${formData.name} — Utkrisht Alliance`
+              : `New inquiry from ${formData.name} — Utkrisht Alliance`,
             from_name: "Utkrisht Alliance Website",
             name: formData.name,
             email: formData.email,
@@ -265,6 +279,11 @@ export function Contact() {
                     <option value="founding-partnership">Founding Partnership / Sponsorship</option>
                     <option value="exhibiting">Exhibiting</option>
                     <option value="arts-architecture">Arts &amp; Architecture</option>
+                    <option value="fashion-shows">Fashion Shows</option>
+                    <option value="luxury-real-estate">Luxury Real Estate Exhibitions</option>
+                    <option value="networking-events">Invite-Only Networking Events</option>
+                    <option value="brand-showcases">Brand Showcases</option>
+                    <option value="whisky-spirits">Whisky &amp; Spirits Salons</option>
                     <option value="brand-strategy-consulting">Brand Strategy &amp; Consulting</option>
                     <option value="experiential-events">Experiential Events</option>
                     <option value="exhibitions-trade-platforms">Exhibitions &amp; Trade Platforms</option>

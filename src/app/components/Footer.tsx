@@ -5,7 +5,7 @@ export function Footer() {
   return (
     <footer className="bg-zinc-950 border-t border-zinc-800">
       <div className="container mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div>
             <img
@@ -33,6 +33,28 @@ export function Footer() {
               </Link>
               <Link to="/partner" className="text-gray-400 hover:text-white text-sm transition-colors">
                 Partner With Us
+              </Link>
+            </div>
+          </div>
+
+          {/* Signature Experiences */}
+          <div>
+            <h4 className="text-sm uppercase tracking-wider mb-4">Signature Experiences</h4>
+            <div className="flex flex-col gap-3">
+              <Link to="/fashion-shows" className="text-gray-400 hover:text-white text-sm transition-colors">
+                Fashion Shows
+              </Link>
+              <Link to="/luxury-real-estate" className="text-gray-400 hover:text-white text-sm transition-colors">
+                Luxury Real Estate
+              </Link>
+              <Link to="/networking-events" className="text-gray-400 hover:text-white text-sm transition-colors">
+                Invite-Only Networking
+              </Link>
+              <Link to="/brand-showcases" className="text-gray-400 hover:text-white text-sm transition-colors">
+                Brand Showcases
+              </Link>
+              <Link to="/whisky-spirits" className="text-gray-400 hover:text-white text-sm transition-colors">
+                Whisky &amp; Spirits Salons
               </Link>
               <Link to="/arts-architecture" className="text-gray-400 hover:text-white text-sm transition-colors">
                 Arts &amp; Architecture
