@@ -28,9 +28,9 @@ const AUDIENCE_STATS: Stat[] = [
     source: "Harbor Real Estate analysis of DXBinteract data, July 2026",
   },
   {
-    value: "₹1 lakh cr",
+    value: "C$14.6B",
     label:
-      "Projected size of India's senior living market by 2030, from ₹30,000 crore today at 1.3% penetration",
+      "Projected size of India's senior living market by 2030 (₹1 lakh crore) — up from ~C$4.4B today (₹30,000 crore) at 1.3% penetration",
     source: "Colliers India, August 2026",
   },
   {
