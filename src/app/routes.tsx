@@ -11,6 +11,8 @@ import { InsightArticle } from "./pages/InsightArticle";
 import { Contact } from "./pages/Contact";
 import { Creators } from "./pages/Creators";
 import { ArtsArchitecture } from "./pages/ArtsArchitecture";
+import { Privacy } from "./pages/Privacy";
+import { Terms } from "./pages/Terms";
 import { SegmentPage } from "./components/SegmentPage";
 import { SEGMENTS } from "./data/segments";
 import { SHOW_MEDIA_PAGE } from "./featureFlags";
@@ -41,6 +43,8 @@ export const router = createBrowserRouter([
       { path: "brand-showcases", element: <SegmentPage content={SEGMENTS["brand-showcases"]} /> },
       { path: "whisky-spirits", element: <SegmentPage content={SEGMENTS["whisky-spirits"]} /> },
       { path: "contact", Component: Contact },
+      { path: "privacy", Component: Privacy },
+      { path: "terms", Component: Terms },
     ],
   },
 ]);

@@ -2,6 +2,7 @@ import { motion } from "motion/react";
 import { Calendar, MapPin, Users, ArrowRight } from "lucide-react";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { Link } from "react-router";
+import { SITE } from "../seo";
 
 // Toggle for the "Past Events" showcase. Kept OFF until we have events to show
 // as a new business. Flip to `true` to bring the section back.
@@ -116,6 +117,32 @@ export function Events() {
     (a, b) => a.endsOn.localeCompare(b.endsOn)
   );
 
+  // schema.org Event structured data — helps the founding-season events surface
+  // in search. Venues are "to be announced", so location is the host city.
+  const eventsJsonLd = upcomingEvents.map((e) => ({
+    "@context": "https://schema.org",
+    "@type": "Event",
+    name: e.title,
+    startDate: e.endsOn,
+    endDate: e.endsOn,
+    eventStatus: "https://schema.org/EventScheduled",
+    eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+    description: e.description,
+    image: [SITE.url + e.image],
+    url: SITE.url + "/events",
+    location: {
+      "@type": "Place",
+      name: e.location,
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Toronto",
+        addressRegion: "ON",
+        addressCountry: "CA",
+      },
+    },
+    organizer: { "@type": "Organization", name: SITE.name, url: SITE.url },
+  }));
+
   const pastEvents = [
     {
       title: "Luxury Lifestyle Gala 2025",
@@ -145,6 +172,10 @@ export function Events() {
 
   return (
     <div className="min-h-screen pt-24">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(eventsJsonLd) }}
+      />
       {/* Hero Section */}
       <section className="py-24 bg-zinc-950">
         <div className="container mx-auto px-6">

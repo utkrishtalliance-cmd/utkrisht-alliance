@@ -102,9 +102,18 @@ export function Footer() {
         </div>
 
         <div className="border-t border-zinc-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-gray-400 text-sm">
-            © {new Date().getFullYear()} Utkrisht Alliance. All rights reserved.
-          </p>
+          <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 text-sm text-gray-400">
+            <p>© {new Date().getFullYear()} Utkrisht Alliance. All rights reserved.</p>
+            <span className="hidden sm:inline text-zinc-700">·</span>
+            <div className="flex gap-4">
+              <Link to="/privacy" className="hover:text-white transition-colors">
+                Privacy Policy
+              </Link>
+              <Link to="/terms" className="hover:text-white transition-colors">
+                Terms
+              </Link>
+            </div>
+          </div>
           <div className="flex gap-6">
             <a
               href="https://www.instagram.com/utkrishtalliance/"
