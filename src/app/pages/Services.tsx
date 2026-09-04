@@ -196,31 +196,6 @@ export function Services() {
         </div>
       </section>
 
-      {/* Segment spotlight — links to the Arts & Architecture vertical page */}
-      <section className="pb-4">
-        <div className="container mx-auto px-6">
-          <Link
-            to="/arts-architecture"
-            className="group block max-w-4xl mx-auto border border-zinc-800 hover:border-[#c7a468] transition-colors p-8 md:flex md:items-center md:justify-between gap-6"
-          >
-            <div>
-              <p className="text-xs uppercase tracking-[0.2em] text-[#c7a468] mb-2">
-                For painters, designers &amp; luxury-home brands
-              </p>
-              <h3 className="text-2xl mb-2">Arts &amp; Architecture Showcase</h3>
-              <p className="text-gray-400 text-sm">
-                A curated stage for fine art, design, and luxury living — featured
-                before collectors and luxury-home buyers.
-              </p>
-            </div>
-            <span className="mt-4 md:mt-0 inline-flex items-center gap-2 text-sm uppercase tracking-wider whitespace-nowrap text-gray-300 group-hover:text-white transition-colors">
-              Explore
-              <ArrowRight size={16} />
-            </span>
-          </Link>
-        </div>
-      </section>
-
       {/* Process Section */}
       <section className="py-24 bg-zinc-950">
         <div className="container mx-auto px-6">
