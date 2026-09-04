@@ -52,7 +52,7 @@ const ALL_UPCOMING: UpcomingEvent[] = [
     status: "Save the Date",
   },
   {
-    title: "Utkrisht Investment Summit",
+    title: "Utkrisht Real Estate Summit",
     endsOn: "2027-05-09",
     date: "Sunday, May 9, 2027",
     location: "Toronto, Ontario — venue to be announced",
@@ -311,7 +311,7 @@ export function Events() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {[
               {
-                name: "Utkrisht Investment Summit",
+                name: "Utkrisht Real Estate Summit",
                 description:
                   "Property and senior living across Dubai and India, each spring",
               },
