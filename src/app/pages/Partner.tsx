@@ -53,7 +53,7 @@ const AUDIENCE_NOTES = [
 const FOUNDING_TIERS = [
   {
     tier: "Founding Partner",
-    positions: "Three positions per event",
+    positions: "Twelve for the founding season",
     description:
       "Permanent association with the launch of the property, and year-one rates locked for three seasons.",
     features: [
@@ -245,8 +245,10 @@ export function Partner() {
             </div>
             <h2 className="text-4xl md:text-6xl mb-4">Founding Positions</h2>
             <p className="text-gray-400 text-lg max-w-3xl mx-auto">
-              Founding Partner positions exist only in the first season. They are
-              limited by contract, not by convention.
+              No more than twelve Founding Partners will ever be named. The
+              positions exist only in the first season — limited by contract, not
+              by convention — and founding terms close once the cohort is full, or
+              on January 31, 2027, whichever comes first.
             </p>
           </motion.div>
 
@@ -292,6 +294,18 @@ export function Partner() {
             Rates are set per event and per category. We will send the current
             rate card and availability within one business day.
           </p>
+
+          <div className="max-w-2xl mx-auto mt-10 border-l-2 border-zinc-700 pl-6 py-2">
+            <h3 className="text-sm uppercase tracking-wider mb-3">
+              After the founding season
+            </h3>
+            <p className="text-gray-400 text-sm leading-relaxed">
+              Founding is a first-season offer. From the 2028 season no new
+              Founding Partners are named, standard rates apply — approximately 25%
+              above founding rates — and category exclusivity opens, with founding
+              partners keeping first right of refusal in their category.
+            </p>
+          </div>
         </div>
       </section>
 
