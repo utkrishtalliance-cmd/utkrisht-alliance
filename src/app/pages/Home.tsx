@@ -56,7 +56,7 @@ export function Home() {
     {
       title: "Invite-Only Networking Events",
       description: "Exclusive connections for high-value audiences",
-      image: "/images/photo-1768508948485-a7adc1f3427f.jpg",
+      image: "/images/networking-events.jpg",
       to: "/networking-events",
     },
   ];
