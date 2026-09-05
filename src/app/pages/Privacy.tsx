@@ -134,12 +134,36 @@ export function Privacy() {
             </div>
 
             <div>
-              <h2 className="text-2xl mb-3 text-white">6. Cookies</h2>
+              <h2 className="text-2xl mb-3 text-white">
+                6. Cookies and analytics
+              </h2>
               <p>
-                This site uses only the cookies and similar technologies necessary
-                for it to function and to protect our forms from abuse. We do not
-                use advertising cookies. If we introduce analytics in future, we
-                will update this policy and, where required, ask for your consent.
+                This site uses cookies and similar technologies that are necessary
+                for it to function and to protect our forms from abuse. We also use
+                Google Analytics (GA4) to understand how visitors use the site —
+                for example, which pages are viewed and how people arrive. Google
+                Analytics sets cookies (such as{" "}
+                <span className="text-gray-400">_ga</span>) and processes usage
+                data on our behalf; see{" "}
+                <a
+                  href="https://policies.google.com/privacy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline hover:text-white"
+                >
+                  Google's privacy policy
+                </a>{" "}
+                for details. We do not use these cookies for advertising. You can
+                opt out of Google Analytics with{" "}
+                <a
+                  href="https://tools.google.com/dlpage/gaoptout"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline hover:text-white"
+                >
+                  Google's browser add-on
+                </a>
+                , or by blocking cookies in your browser.
               </p>
             </div>
 
