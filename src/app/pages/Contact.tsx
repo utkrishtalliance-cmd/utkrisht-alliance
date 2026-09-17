@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import { useSearchParams } from "react-router";
 import { WEB3FORMS_ACCESS_KEY, CONTACT_EMAIL } from "../config";
 import { HCaptchaBox, type HCaptchaHandle } from "../components/HCaptchaBox";
+import { SHOW_PHONE } from "../featureFlags";
 
 // Builds a pre-filled mailto: link so a lead is never lost, even when the
 // delivery backend isn't configured yet or a submission fails.
@@ -435,6 +436,7 @@ export function Contact() {
                     </div>
                   </div>
 
+                  {SHOW_PHONE && (
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-zinc-900 rounded-full flex items-center justify-center flex-shrink-0">
                       <Phone size={20} className="text-white" />
@@ -452,6 +454,7 @@ export function Contact() {
                       </p>
                     </div>
                   </div>
+                  )}
                 </div>
               </div>
 

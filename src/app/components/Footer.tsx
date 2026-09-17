@@ -1,5 +1,6 @@
 import { Link } from "react-router";
 import { Instagram, Linkedin, Youtube, Mail, MapPin, Phone } from "lucide-react";
+import { SHOW_PHONE } from "../featureFlags";
 
 export function Footer() {
   return (
@@ -86,17 +87,19 @@ export function Footer() {
                   </a>
                 </span>
               </div>
-              <div className="flex items-start gap-2 text-gray-400 text-sm">
-                <Phone size={16} className="mt-1 flex-shrink-0" />
-                <span>
-                  <a href="tel:+16399160639" className="hover:text-white transition-colors">
-                    +1 (639) 916-0639
-                  </a>
-                  <span className="block text-gray-500 text-xs mt-1">
-                    Mon–Fri, 9:00 AM – 6:00 PM EST
+              {SHOW_PHONE && (
+                <div className="flex items-start gap-2 text-gray-400 text-sm">
+                  <Phone size={16} className="mt-1 flex-shrink-0" />
+                  <span>
+                    <a href="tel:+16399160639" className="hover:text-white transition-colors">
+                      +1 (639) 916-0639
+                    </a>
+                    <span className="block text-gray-500 text-xs mt-1">
+                      Mon–Fri, 9:00 AM – 6:00 PM EST
+                    </span>
                   </span>
-                </span>
-              </div>
+                </div>
+              )}
             </div>
           </div>
         </div>
