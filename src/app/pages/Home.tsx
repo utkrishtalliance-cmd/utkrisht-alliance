@@ -204,7 +204,7 @@ export function Home() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="flex flex-wrap justify-center gap-6">
             {experiences.map((exp, index) => (
               <motion.div
                 key={exp.title}
@@ -212,7 +212,7 @@ export function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="group relative overflow-hidden aspect-[4/3] cursor-pointer"
+                className="group relative overflow-hidden aspect-[4/3] cursor-pointer w-full md:w-[calc((100%_-_1.5rem)/2)] lg:w-[calc((100%_-_3rem)/3)]"
               >
                 <ImageWithFallback
                   src={exp.image}
