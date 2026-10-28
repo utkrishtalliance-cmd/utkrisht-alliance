@@ -32,6 +32,11 @@ const PAGE_META: Record<string, Meta> = {
     description:
       "Brand strategy, experiential events, exhibitions, media production, PR and more — end-to-end solutions for luxury brands.",
   },
+  "/signature-experiences": {
+    title: "Signature Experiences — Utkrisht Alliance",
+    description:
+      "Our curated event properties — fashion, beauty, arts, luxury real estate, spirits, brand showcases and private networking.",
+  },
   "/events": {
     title: "Events — Utkrisht Alliance",
     description:

@@ -38,10 +38,9 @@ export function Navigation() {
     { to: "/", label: "Home" },
     { to: "/about", label: "About" },
     { to: "/services", label: "Services" },
+    { to: "/signature-experiences", label: "Signature Experiences" },
     { to: "/events", label: "Events" },
-    { to: "/partner", label: "Partner With Us" },
     { to: "/media", label: "Media" },
-    { to: "/insights", label: "Insights" },
     { to: "/creators", label: "Creators" },
     { to: "/contact", label: "Contact" },
   ].filter((link) => SHOW_MEDIA_PAGE || link.to !== "/media");

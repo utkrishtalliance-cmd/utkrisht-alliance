@@ -13,6 +13,7 @@ import { Creators } from "./pages/Creators";
 import { ArtsArchitecture } from "./pages/ArtsArchitecture";
 import { Privacy } from "./pages/Privacy";
 import { Terms } from "./pages/Terms";
+import { SignatureExperiences } from "./pages/SignatureExperiences";
 import { SegmentPage } from "./components/SegmentPage";
 import { SEGMENTS } from "./data/segments";
 import { SHOW_MEDIA_PAGE } from "./featureFlags";
@@ -25,6 +26,7 @@ export const router = createBrowserRouter([
       { index: true, Component: Home },
       { path: "about", Component: About },
       { path: "services", Component: Services },
+      { path: "signature-experiences", Component: SignatureExperiences },
       { path: "events", Component: Events },
       { path: "partner", Component: Partner },
       {
