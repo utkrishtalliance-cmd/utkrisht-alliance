@@ -36,6 +36,12 @@ export function Home() {
       to: "/fashion-shows",
     },
     {
+      title: "Beauty & Grooming",
+      description: "Curated showcases for beauty, grooming and fragrance houses",
+      image: "/images/beauty-grooming.jpg",
+      to: "/beauty-grooming",
+    },
+    {
       title: "Arts & Architecture",
       description: "Curated showcases spanning fine art, design, and luxury living spaces",
       image: "/images/arts-architecture.jpg",

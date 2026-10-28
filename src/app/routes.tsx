@@ -42,6 +42,7 @@ export const router = createBrowserRouter([
       { path: "networking-events", element: <SegmentPage content={SEGMENTS["networking-events"]} /> },
       { path: "brand-showcases", element: <SegmentPage content={SEGMENTS["brand-showcases"]} /> },
       { path: "whisky-spirits", element: <SegmentPage content={SEGMENTS["whisky-spirits"]} /> },
+      { path: "beauty-grooming", element: <SegmentPage content={SEGMENTS["beauty-grooming"]} /> },
       { path: "contact", Component: Contact },
       { path: "privacy", Component: Privacy },
       { path: "terms", Component: Terms },

@@ -25,6 +25,10 @@ import {
   Home,
   Palette,
   Car,
+  Droplet,
+  Scissors,
+  SprayCan,
+  Leaf,
   Check,
   ArrowRight,
   type LucideIcon,
@@ -98,6 +102,10 @@ const ICONS: Record<string, LucideIcon> = {
   Home,
   Palette,
   Car,
+  Droplet,
+  Scissors,
+  SprayCan,
+  Leaf,
 };
 
 function iconFor(name?: string): LucideIcon {

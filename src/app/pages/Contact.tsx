@@ -43,6 +43,7 @@ const VALID_INTERESTS = [
   "networking-events",
   "brand-showcases",
   "whisky-spirits",
+  "beauty-grooming",
   "brand-strategy-consulting",
   "experiential-events",
   "exhibitions-trade-platforms",
@@ -66,6 +67,7 @@ const SUBJECT_PREFIX: Record<string, string> = {
   "networking-events": "NETWORKING EVENTS",
   "brand-showcases": "BRAND SHOWCASES",
   "whisky-spirits": "WHISKY & SPIRITS",
+  "beauty-grooming": "BEAUTY & GROOMING",
 };
 
 export function Contact() {
@@ -285,6 +287,7 @@ export function Contact() {
                     <option value="networking-events">Invite-Only Networking Events</option>
                     <option value="brand-showcases">Brand Showcases</option>
                     <option value="whisky-spirits">Whisky &amp; Spirits Salons</option>
+                    <option value="beauty-grooming">Beauty &amp; Grooming</option>
                     <option value="brand-strategy-consulting">Brand Strategy &amp; Consulting</option>
                     <option value="experiential-events">Experiential Events</option>
                     <option value="exhibitions-trade-platforms">Exhibitions &amp; Trade Platforms</option>

@@ -880,5 +880,166 @@ export const SEGMENTS: Record<string, SegmentContent> = {
         "secondaryCtaLabel": "Our approach"
       }
     ]
+  },
+  "beauty-grooming": {
+    "slug": "beauty-grooming",
+    "heroImage": "/images/beauty-grooming.jpg",
+    "hero": {
+      "eyebrow": "Beauty & Grooming · Founding Season 2026–27",
+      "headline": "Beauty and grooming, met in the hand and remembered.",
+      "subcopy": "Utkrisht Alliance brings cosmetics, skincare, fragrance and men's grooming houses into the room — sampled, demonstrated and discussed with a discerning South Asian and NRI audience, and carried by editorial coverage and consent-based introductions that outlast the evening. For our founding season, a small first circle of houses is invited to be featured.",
+      "footnote": "A limited number of founding placements for the 2026–27 season."
+    },
+    "sections": [
+      {
+        "kind": "checklist",
+        "eyebrow": "The Invitation",
+        "icon": "Sparkles",
+        "heading": "A counter, not a crowded aisle",
+        "subcopy": "We are building a showcase for houses who would rather be discovered closely than stocked everywhere. If your products are made to be touched, tried and understood, this is an invitation to join the founding season.",
+        "points": [
+          "A curated presence before an assembled HNI and NRI luxury audience",
+          "Your house presented and demonstrated, never lost on a shelf",
+          "Editorial and social coverage produced around your products and story",
+          "Introductions to interested buyers, stockists and press — only where you consent"
+        ]
+      },
+      {
+        "kind": "cards",
+        "eyebrow": "Who We Showcase",
+        "icon": "Sparkles",
+        "heading": "The houses we bring to the room",
+        "subcopy": "A curated line-up, selected by review rather than open call, so that every name belongs beside the next.",
+        "ctaLabel": "Ask about your house",
+        "footnote": "Placement is by selection. Participation terms are shared on enquiry.",
+        "cards": [
+          {
+            "icon": "Droplet",
+            "title": "Skincare & Cosmetics",
+            "description": "Luxury skincare, colour cosmetics and complexion lines, presented to an audience that buys for the ritual rather than the trend.",
+            "bullets": [
+              "A curated counter or discovery bar",
+              "Guided consultations and sampling",
+              "Coverage that treats the formulation as the subject"
+            ]
+          },
+          {
+            "icon": "Scissors",
+            "title": "Men's Grooming & Barbering",
+            "description": "Premium shave, beard and grooming houses, shown and demonstrated to a considered room of men who invest in the ritual.",
+            "bullets": [
+              "A grooming lounge or demonstration chair",
+              "Live demonstrations by your team",
+              "Introductions to stockists and clients"
+            ]
+          },
+          {
+            "icon": "SprayCan",
+            "title": "Fragrance & Perfumery",
+            "description": "Niche and artisanal perfumery, met the way scent is meant to be — in person, unhurried, and in context.",
+            "bullets": [
+              "A scent salon or discovery table",
+              "Guided olfactory journeys",
+              "Coverage of the house and the nose behind it"
+            ]
+          },
+          {
+            "icon": "Leaf",
+            "title": "Wellness & Ayurvedic Beauty",
+            "description": "Luxury wellness, spa and Ayurvedic beauty — rooted traditions presented to an audience that knows them well.",
+            "bullets": [
+              "A ritual space or treatment preview",
+              "Expert-led demonstrations",
+              "Consent-based introductions"
+            ]
+          }
+        ]
+      },
+      {
+        "kind": "split",
+        "eyebrow": "The Room",
+        "icon": "Users",
+        "heading": "Quality of the room over quantity",
+        "subcopy": "We are a new platform, so we will not quote you footfall we have not yet earned. What we will tell you is who we are building the room for, and how we protect it — because for houses like yours, the character of the room matters more than its size.",
+        "points": [
+          "HNI and NRI guests, collectors and households who buy beauty and grooming for the ritual, and for the long term",
+          "An audience that values provenance, formulation and craft over the mass and the trend",
+          "Attendance by registration and review, not open sale — you will know the character of the room before you commit to it",
+          "We do not sell or share the guest list; you receive only the details of those who opt in to meet you"
+        ]
+      },
+      {
+        "kind": "cards",
+        "eyebrow": "The Showcase",
+        "icon": "Presentation",
+        "heading": "How your house is presented",
+        "subcopy": "Space is curated to the products, not sold by the square metre. We match the format to what you make — and every placement carries the same coverage and introductions well past the evening itself.",
+        "footnote": "Rates are set per event and per category, and sent on enquiry.",
+        "cards": [
+          {
+            "icon": "Droplet",
+            "title": "The Discovery Counter",
+            "description": "A curated counter for skincare, cosmetics and complexion — sampling, consultation and considered display."
+          },
+          {
+            "icon": "Scissors",
+            "title": "The Grooming Lounge",
+            "description": "A demonstration space for grooming and barbering houses — live demos, product trials, and time with guests."
+          },
+          {
+            "icon": "SprayCan",
+            "title": "The Scent Salon",
+            "description": "An olfactory setting for perfumery — guided discovery, unhurried, and in context."
+          }
+        ],
+        "included": {
+          "title": "Included with every placement",
+          "items": [
+            "Editorial coverage of your products and story",
+            "Social features across our channels",
+            "Consent-based introductions to interested buyers and stockists",
+            "A printed presence in the event's curated guide"
+          ]
+        }
+      },
+      {
+        "kind": "note",
+        "heading": "On claims and compliance",
+        "body": "We present cosmetics, grooming and fragrance as the house presents them — we do not make or permit therapeutic, medical or health claims, and nothing is presented as a drug or natural health product unless the brand holds the appropriate authorisation. Brands are responsible for their own regulatory compliance, including Health Canada's cosmetic and product rules. Sampling is for adult guests, and ingredient and allergen information is made available on request."
+      },
+      {
+        "kind": "commitments",
+        "eyebrow": "What We Commit To",
+        "icon": "Handshake",
+        "heading": "What we can promise on a first event",
+        "subcopy": "We are new, and we build the way we would want to be treated — honestly, and with care for the room. Four things we can promise now, and will be held to.",
+        "cards": [
+          {
+            "title": "A genuinely curated floor",
+            "description": "Every house is reviewed before a place is offered. We would rather show fewer products, well, than fill an aisle — the curation is the product."
+          },
+          {
+            "title": "Introductions by consent, never lists",
+            "description": "We do not sell or share buyer lists. You receive the details of people who ask to be introduced — consent-based, privacy-respecting, and the only kind of introduction worth having."
+          },
+          {
+            "title": "The formulation, respected",
+            "description": "We present your products on their own terms — the ingredients, the craft, the story — without overselling and without invented acclaim."
+          },
+          {
+            "title": "An honest post-event account",
+            "description": "You receive a plain account of who attended, how the room responded, and the introductions you were given — reported as measured, including where it falls short of what we hoped."
+          }
+        ]
+      },
+      {
+        "kind": "cta",
+        "eyebrow": "Founding Season · 2026–27",
+        "heading": "Request an invitation",
+        "subcopy": "Founding-season placements are limited and offered by review. Tell us about your house — your products, your story, and what you would like to present — and we will be in touch about being featured. We reply within one business day.",
+        "ctaLabel": "Request an invitation",
+        "secondaryCtaLabel": "Our approach"
+      }
+    ]
   }
 };

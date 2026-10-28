@@ -87,6 +87,11 @@ const PAGE_META: Record<string, Meta> = {
     description:
       "Private, invitation-only evenings for a vetted circle of HNI and NRI guests, hosted with discretion.",
   },
+  "/beauty-grooming": {
+    title: "Beauty & Grooming — Utkrisht Alliance",
+    description:
+      "Curated showcases for beauty, grooming, fragrance and wellness houses, presented to a discerning HNI and NRI audience.",
+  },
   "/privacy": {
     title: "Privacy Policy — Utkrisht Alliance",
     description:
