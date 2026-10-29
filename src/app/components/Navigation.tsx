@@ -47,8 +47,14 @@ export function Navigation() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-black/90 backdrop-blur-lg py-4" : "bg-transparent py-6"
+      className={`fixed top-0 left-0 right-0 z-50 ${
+        isOpen ? "" : "transition-all duration-300"
+      } ${
+        isOpen
+          ? "bg-black py-6 bottom-0 overflow-y-auto"
+          : scrolled
+            ? "bg-black/90 backdrop-blur-lg py-4"
+            : "bg-transparent py-6"
       }`}
     >
       <div className="container mx-auto px-6">
@@ -94,7 +100,9 @@ export function Navigation() {
             <motion.div
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
-              exit={{ opacity: 0, height: 0 }}
+              // Instant exit: the nav background turns transparent on close,
+              // so an animated exit would overlap the hero text.
+              exit={{ opacity: 0, height: 0, transition: { duration: 0 } }}
               className="lg:hidden overflow-hidden"
             >
               <div className="flex flex-col gap-4 pt-6 pb-4">
