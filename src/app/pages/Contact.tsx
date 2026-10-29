@@ -460,55 +460,8 @@ export function Contact() {
                   )}
                 </div>
               </div>
-
-              {/* Office Hours */}
-              <div className="border border-zinc-800 p-8">
-                <h3 className="text-xl mb-6">Office Hours</h3>
-                <div className="space-y-3 text-sm">
-                  <div className="flex justify-between">
-                    <span className="text-gray-400">Monday - Friday</span>
-                    <span>9:00 AM - 6:00 PM</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-400">Saturday</span>
-                    <span>10:00 AM - 4:00 PM</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-400">Sunday</span>
-                    <span>Closed</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Quick Response */}
-              <div className="bg-zinc-900 p-8">
-                <h3 className="text-xl mb-4">Quick Response Guarantee</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">
-                  We understand the importance of timely communication. Our team
-                  commits to responding to all inquiries within 24 business hours.
-                  For urgent matters, please indicate so in your message.
-                </p>
-              </div>
             </motion.div>
           </div>
-        </div>
-      </section>
-
-      {/* Map Section Placeholder */}
-      <section className="py-24 bg-zinc-950">
-        <div className="container mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="bg-zinc-900 h-96 flex items-center justify-center"
-          >
-            <div className="text-center">
-              <MapPin size={48} className="mx-auto mb-4 text-zinc-700" />
-              <p className="text-gray-500">Interactive map coming soon</p>
-            </div>
-          </motion.div>
         </div>
       </section>
     </div>
