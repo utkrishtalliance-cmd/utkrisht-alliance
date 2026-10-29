@@ -1,6 +1,5 @@
 import { Link, useLocation } from "react-router";
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { SHOW_MEDIA_PAGE } from "../featureFlags";
 
@@ -87,10 +86,10 @@ export function Navigation() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden text-white"
-            aria-label="Toggle menu"
+            className="lg:hidden text-white text-sm uppercase tracking-wider border border-white/40 px-4 py-2 transition-colors hover:border-white"
+            aria-expanded={isOpen}
           >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
+            {isOpen ? "Close" : "Menu"}
           </button>
         </div>
 
