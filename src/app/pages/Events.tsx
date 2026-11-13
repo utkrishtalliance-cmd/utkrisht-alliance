@@ -49,8 +49,8 @@ const ALL_UPCOMING: UpcomingEvent[] = [
   },
   {
     title: "The 6ix Dram",
-    endsOn: "2027-02-27",
-    date: "Saturday, February 27, 2027",
+    endsOn: "2027-10-31",
+    date: "October 2027 — dates to be announced",
     location: "Downtown Toronto — venue to be announced",
     description:
       "An evening of rare and small-batch whisky, with a focus on the Indian single malts now collecting world awards. Part of our founding season.",
@@ -59,8 +59,8 @@ const ALL_UPCOMING: UpcomingEvent[] = [
   },
   {
     title: "Utkrisht Éclat",
-    endsOn: "2027-04-10",
-    date: "Saturday, April 10, 2027",
+    endsOn: "2027-02-24",
+    date: "Wednesday, February 24, 2027",
     location: "Toronto, Ontario — venue to be announced",
     capacity: "150–200 guests · by invitation",
     description:
@@ -70,12 +70,12 @@ const ALL_UPCOMING: UpcomingEvent[] = [
   },
   {
     title: "Utkrisht Real Estate & Senior Living Summit",
-    endsOn: "2027-05-09",
-    date: "Sunday, May 9, 2027",
+    endsOn: "2027-06-30",
+    date: "June 2027 — dates to be announced",
     location: "Toronto, Ontario — venue to be announced",
     capacity: "400–600 delegates",
     description:
-      "Three tracks in one room for Canadian NRI families: Dubai residential, Indian luxury residential, and senior living for parents in India. Timed to Akshaya Tritiya, the most auspicious acquisition day of the year.",
+      "Three tracks in one room for Canadian NRI families: Dubai residential, Indian luxury residential, and senior living for parents in India.",
     image: "/images/photo-1660486615549-d50a6564e865.jpg",
     status: "Save the Date",
   },
@@ -92,8 +92,8 @@ const ALL_UPCOMING: UpcomingEvent[] = [
   },
   {
     title: "Utkrisht Salon des Arts",
-    endsOn: "2027-10-23",
-    date: "Saturday, October 23, 2027",
+    endsOn: "2027-11-30",
+    date: "November 2027 — dates to be announced",
     location: "Toronto, Ontario — venue to be announced",
     capacity: "100–120 guests · by invitation",
     description:
@@ -103,19 +103,19 @@ const ALL_UPCOMING: UpcomingEvent[] = [
   },
   {
     title: "Utkrisht Couture",
-    endsOn: "2027-08-28",
-    date: "Saturday, August 28, 2027",
+    endsOn: "2027-05-31",
+    date: "May 2027 — dates to be announced",
     location: "Toronto, Ontario — venue to be announced",
     capacity: "350–500 guests · 12–18 designers",
     description:
-      "An invitation-only bridal and occasion-wear showcase with private appointment suites, timed for late summer so pieces can be commissioned in good time for the festive season and the winter wedding calendar.",
+      "An invitation-only bridal and occasion-wear showcase with private appointment suites and designer-led presentations, giving commissions ample time ahead of the festive and winter wedding seasons.",
     image: "/images/photo-1773745060497-4cc1df774c72.jpg",
     status: "Save the Date",
   },
   {
     title: "Jalsa — The Founding Gala",
-    endsOn: "2027-12-04",
-    date: "Saturday, December 4, 2027",
+    endsOn: "2027-12-31",
+    date: "December 2027 — dates to be announced",
     location: "Toronto, Ontario — venue to be announced",
     capacity: "300–450 guests · black tie",
     description:
@@ -360,7 +360,7 @@ export function Events() {
               {
                 name: "Utkrisht Real Estate & Senior Living Summit",
                 description:
-                  "Property and senior living across Dubai and India, each spring",
+                  "Property and senior living across Dubai and India, each year",
               },
               {
                 name: "Utkrisht Luxury Expo",
