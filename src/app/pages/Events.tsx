@@ -36,18 +36,6 @@ type UpcomingEvent = {
 // segment page).
 const ALL_UPCOMING: UpcomingEvent[] = [
   {
-    title: "The Utkrisht Circle — Inaugural Salon",
-    endsOn: "2026-12-05",
-    date: "Saturday, December 5, 2026",
-    location: "Toronto, Ontario — by invitation",
-    capacity: "40 covers · invitation only",
-    description:
-      "Our first gathering: a private dinner for forty. No stage, no pitch — an evening among the founders, investors and collectors the season is built for. Invitations open on request.",
-    image: "/images/photo-1762765685348-4bced247d12c.jpg",
-    imagePosition: "object-bottom",
-    status: "Save the Date",
-  },
-  {
     title: "The 6ix Dram",
     endsOn: "2027-10-31",
     date: "October 2027 — dates to be announced",
@@ -77,17 +65,6 @@ const ALL_UPCOMING: UpcomingEvent[] = [
     description:
       "Three tracks in one room for Canadian NRI families: Dubai residential, Indian luxury residential, and senior living for parents in India.",
     image: "/images/photo-1660486615549-d50a6564e865.jpg",
-    status: "Save the Date",
-  },
-  {
-    title: "Utkrisht Luxury Expo",
-    endsOn: "2027-06-13",
-    date: "June 12–13, 2027",
-    location: "Toronto, Ontario — venue to be announced",
-    capacity: "2,500–4,000 over two days",
-    description:
-      "Four halls across luxury Ayurveda and beauty, premium Indian and world spirits, international education, and luxury lifestyle — watches, art, automotive and hospitality.",
-    image: "/images/photo-1579254216656-3c0c16a3bdd6.jpg",
     status: "Save the Date",
   },
   {
@@ -355,17 +332,12 @@ export function Events() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
             {[
               {
                 name: "Utkrisht Real Estate & Senior Living Summit",
                 description:
                   "Property and senior living across Dubai and India, each year",
-              },
-              {
-                name: "Utkrisht Luxury Expo",
-                description:
-                  "Beauty, spirits, education and lifestyle under one roof, each summer",
               },
               {
                 name: "Utkrisht Couture",
