@@ -29,6 +29,11 @@ type UpcomingEvent = {
 //
 // Venues are listed as "to be announced" until contracts are signed — naming a
 // room we haven't booked is the kind of detail an HNI audience checks.
+//
+// NOTE — Utkrisht Éclat involves cosmetic sampling: samples are for adult guests,
+// no therapeutic or medical claims are made or permitted, and brands remain
+// responsible for Health Canada cosmetic/NHP compliance (see the Beauty & Grooming
+// segment page).
 const ALL_UPCOMING: UpcomingEvent[] = [
   {
     title: "The Utkrisht Circle — Inaugural Salon",
@@ -50,6 +55,17 @@ const ALL_UPCOMING: UpcomingEvent[] = [
     description:
       "An evening of rare and small-batch whisky, with a focus on the Indian single malts now collecting world awards. Part of our founding season.",
     image: "/images/photo-1768508948485-a7adc1f3427f.jpg",
+    status: "Save the Date",
+  },
+  {
+    title: "Utkrisht Éclat",
+    endsOn: "2027-04-10",
+    date: "Saturday, April 10, 2027",
+    location: "Toronto, Ontario — venue to be announced",
+    capacity: "150–200 guests · by invitation",
+    description:
+      "A curated beauty and grooming salon — skincare, cosmetics, fragrance, men's grooming and Ayurvedic wellness, discovered by hand with consultations, demonstrations and a scent salon. Part of our founding season.",
+    image: "/images/beauty-grooming.jpg",
     status: "Save the Date",
   },
   {
