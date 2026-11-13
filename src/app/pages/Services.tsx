@@ -2,6 +2,7 @@ import { motion } from "motion/react";
 import {
   TrendingUp,
   Sparkles,
+  Briefcase,
   Building2,
   Camera,
   Users,
@@ -40,6 +41,20 @@ export function Services() {
         "Product launch experiences",
       ],
       image: "/images/photo-1579254216656-3c0c16a3bdd6.jpg",
+    },
+    {
+      icon: Briefcase,
+      title: "Corporate & Bespoke Events",
+      description:
+        "End-to-end production of corporate and private events, delivered to a single exacting standard",
+      features: [
+        "Product launches & brand activations",
+        "Conferences, summits & award galas",
+        "Private celebrations & milestone events",
+        "Venue, catering & hospitality management",
+        "On-site production, from brief to final strike",
+      ],
+      image: "/images/founding-gala.jpg",
     },
     {
       icon: Building2,
