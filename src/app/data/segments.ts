@@ -8,10 +8,10 @@ export const SEGMENTS: Record<string, SegmentContent> = {
     "slug": "fashion-shows",
     "heroImage": "/images/photo-1768913640595-104e0170dfee.jpg",
     "hero": {
-      "eyebrow": "Fashion Shows · Founding Season 2026–27",
+      "eyebrow": "Fashion Shows · Founding Season 2027",
       "headline": "A runway measured by who is in the seats.",
       "subcopy": "Utkrisht Alliance stages curated runway showcases for couture houses, emerging designers, and the jewellery and lifestyle labels that dress a discerning South Asian and NRI audience. A founding season, composed with intention — the room reviewed, the coverage earned, the introductions made only with consent.",
-      "footnote": "A limited number of founding placements for the 2026–27 season."
+      "footnote": "A limited number of founding placements for the 2027 season."
     },
     "sections": [
       {
@@ -170,10 +170,10 @@ export const SEGMENTS: Record<string, SegmentContent> = {
     "slug": "luxury-real-estate",
     "heroImage": "/images/photo-1660486615549-d50a6564e865.jpg",
     "hero": {
-      "eyebrow": "Luxury Real Estate Exhibitions · Founding Season 2026–27",
+      "eyebrow": "Luxury Real Estate Exhibitions · Founding Season 2027",
       "headline": "Present your finest addresses to the buyers who cross borders to own them.",
       "subcopy": "Utkrisht Alliance is assembling a curated property exposition — a considered floor where a small circle of luxury developers and real-estate brands present exceptional residences to a reviewed room of HNI and NRI buyers. Showings are education-first, carried by editorial coverage and consent-based introductions that outlast the evening. For our founding season, this is an invitation to exhibit, not an open call.",
-      "footnote": "A limited number of founding stands for the 2026–27 season."
+      "footnote": "A limited number of founding stands for the 2027 season."
     },
     "sections": [
       {
@@ -307,7 +307,7 @@ export const SEGMENTS: Record<string, SegmentContent> = {
       },
       {
         "kind": "cta",
-        "eyebrow": "Founding Season · 2026–27",
+        "eyebrow": "Founding Season · 2027",
         "heading": "Request an invitation",
         "subcopy": "Founding-season stands are limited and offered by review. Tell us about your development or portfolio — where it is, who it is for, and what you would like to show — and we will be in touch about exhibiting. We reply within one business day.",
         "ctaLabel": "Request an invitation",
@@ -319,10 +319,10 @@ export const SEGMENTS: Record<string, SegmentContent> = {
     "slug": "networking-events",
     "heroImage": "/images/photo-1768508948485-a7adc1f3427f.jpg",
     "hero": {
-      "eyebrow": "Invite-Only Networking Events · Founding Season 2026–27",
+      "eyebrow": "Invite-Only Networking Events · Founding Season 2027",
       "headline": "A room worth being in.",
       "subcopy": "Private, invitation-only evenings for a vetted circle of HNI and NRI guests. We curate the room by registration and review, host your brand with discretion, and make introductions only where both sides consent.",
-      "footnote": "A limited number of founding host positions for the 2026–27 season."
+      "footnote": "A limited number of founding host positions for the 2027 season."
     },
     "sections": [
       {
@@ -504,10 +504,10 @@ export const SEGMENTS: Record<string, SegmentContent> = {
     "slug": "brand-showcases",
     "heroImage": "/images/photo-1769509456084-dacd3cde0e20.jpg",
     "hero": {
-      "eyebrow": "Brand Showcases · Founding Season 2026–27",
+      "eyebrow": "Brand Showcases · Founding Season 2027",
       "headline": "Your brand, staged as an experience.",
       "subcopy": "For the automotive, watch and jewellery, fashion, travel, and premium lifestyle houses seeking an immersive presence before a curated South Asian and NRI luxury audience. We design the moment, produce it with care, and carry its story beyond the room.",
-      "footnote": "A limited number of founding showcases for the 2026–27 season."
+      "footnote": "A limited number of founding showcases for the 2027 season."
     },
     "sections": [
       {
@@ -697,10 +697,10 @@ export const SEGMENTS: Record<string, SegmentContent> = {
     "slug": "whisky-spirits",
     "heroImage": "/images/whisky-salon.jpg",
     "hero": {
-      "eyebrow": "Whisky & Spirits Salons · Founding Season 2026–27",
+      "eyebrow": "Whisky & Spirits Salons · Founding Season 2027",
       "headline": "Rare spirits, poured for the few who came to listen.",
       "subcopy": "Intimate curated salons of single malts and small-batch spirits — distillery and brand storytelling for collectors and connoisseurs, in a room assembled by invitation. This is a founding season: we offer the audience and the craft, not figures we have not yet earned.",
-      "footnote": "A limited number of founding salons for the 2026–27 season."
+      "footnote": "A limited number of founding salons for the 2027 season."
     },
     "sections": [
       {
@@ -885,10 +885,10 @@ export const SEGMENTS: Record<string, SegmentContent> = {
     "slug": "beauty-grooming",
     "heroImage": "/images/beauty-grooming.jpg",
     "hero": {
-      "eyebrow": "Beauty & Grooming · Founding Season 2026–27",
+      "eyebrow": "Beauty & Grooming · Founding Season 2027",
       "headline": "Beauty and grooming, met in the hand and remembered.",
       "subcopy": "Utkrisht Alliance brings cosmetics, skincare, fragrance and men's grooming houses into the room — sampled, demonstrated and discussed with a discerning South Asian and NRI audience, and carried by editorial coverage and consent-based introductions that outlast the evening. For our founding season, a small first circle of houses is invited to be featured.",
-      "footnote": "A limited number of founding placements for the 2026–27 season."
+      "footnote": "A limited number of founding placements for the 2027 season."
     },
     "sections": [
       {
@@ -1034,7 +1034,7 @@ export const SEGMENTS: Record<string, SegmentContent> = {
       },
       {
         "kind": "cta",
-        "eyebrow": "Founding Season · 2026–27",
+        "eyebrow": "Founding Season · 2027",
         "heading": "Request an invitation",
         "subcopy": "Founding-season placements are limited and offered by review. Tell us about your house — your products, your story, and what you would like to present — and we will be in touch about being featured. We reply within one business day.",
         "ctaLabel": "Request an invitation",

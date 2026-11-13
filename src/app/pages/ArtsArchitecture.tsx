@@ -201,7 +201,7 @@ export function ArtsArchitecture() {
           >
             <span className="h-px w-14 bg-[#c7a468]" />
             <span className="text-xs md:text-sm tracking-[0.35em] uppercase text-[#c7a468]">
-              Arts &amp; Architecture · Founding Season 2026–27
+              Arts &amp; Architecture · Founding Season 2027
             </span>
           </motion.div>
 
@@ -252,7 +252,7 @@ export function ArtsArchitecture() {
           </motion.div>
 
           <p className="text-gray-500 text-sm mt-6">
-            A limited number of founding positions for the 2026–27 season.
+            A limited number of founding positions for the 2027 season.
           </p>
         </div>
       </section>
@@ -487,7 +487,7 @@ export function ArtsArchitecture() {
           >
             <span className="mx-auto mb-6 block h-px w-14 bg-[#c7a468]" />
             <p className="text-xs md:text-sm tracking-[0.3em] uppercase text-[#c7a468] mb-6">
-              Founding Season · 2026–27
+              Founding Season · 2027
             </p>
             <h2 className="text-4xl md:text-5xl mb-6">Request an invitation</h2>
             <p className="text-gray-400 text-lg mb-12 max-w-2xl mx-auto">

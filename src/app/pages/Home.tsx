@@ -112,7 +112,7 @@ export function Home() {
           >
             <span className="h-px w-14 bg-[#c7a468]" />
             <span className="text-xs md:text-sm tracking-[0.35em] uppercase text-[#c7a468]">
-              Founding Season · 2026–27
+              Founding Season · 2027
             </span>
           </motion.div>
           <motion.h1
@@ -376,7 +376,7 @@ export function Home() {
           >
             <span className="mx-auto mb-6 block h-px w-14 bg-[#c7a468]" />
             <span className="text-xs tracking-[0.3em] uppercase text-[#c7a468]">
-              Founding Season · 2026–27
+              Founding Season · 2027
             </span>
             <h2 className="text-4xl md:text-6xl mt-4 mb-6">Get in at the founding</h2>
             <p className="text-gray-300 text-lg leading-relaxed mb-4">
