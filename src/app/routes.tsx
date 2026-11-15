@@ -16,7 +16,7 @@ import { Terms } from "./pages/Terms";
 import { SignatureExperiences } from "./pages/SignatureExperiences";
 import { SegmentPage } from "./components/SegmentPage";
 import { SEGMENTS } from "./data/segments";
-import { SHOW_MEDIA_PAGE } from "./featureFlags";
+import { SHOW_MEDIA_PAGE, SHOW_NETWORKING } from "./featureFlags";
 
 export const router = createBrowserRouter([
   {
@@ -41,7 +41,12 @@ export const router = createBrowserRouter([
       { path: "arts-architecture", Component: ArtsArchitecture },
       { path: "fashion-shows", element: <SegmentPage content={SEGMENTS["fashion-shows"]} /> },
       { path: "luxury-real-estate", element: <SegmentPage content={SEGMENTS["luxury-real-estate"]} /> },
-      { path: "networking-events", element: <SegmentPage content={SEGMENTS["networking-events"]} /> },
+      {
+        path: "networking-events",
+        ...(SHOW_NETWORKING
+          ? { element: <SegmentPage content={SEGMENTS["networking-events"]} /> }
+          : { loader: () => redirect("/signature-experiences") }),
+      },
       { path: "brand-showcases", element: <SegmentPage content={SEGMENTS["brand-showcases"]} /> },
       { path: "whisky-spirits", element: <SegmentPage content={SEGMENTS["whisky-spirits"]} /> },
       { path: "beauty-grooming", element: <SegmentPage content={SEGMENTS["beauty-grooming"]} /> },

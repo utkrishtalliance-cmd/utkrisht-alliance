@@ -9,3 +9,9 @@ export const SHOW_MEDIA_PAGE = false;
 // Public phone number — temporarily hidden across the footer and Contact page.
 // Flip to `true` to show the number again (markup is kept in place).
 export const SHOW_PHONE = false;
+
+// Invite-Only Networking segment — temporarily removed. When false: hidden from
+// the home grid, footer, Signature Experiences page and Contact dropdown, and
+// /networking-events redirects to /signature-experiences. The page data and
+// markup are kept — flip to `true` to restore.
+export const SHOW_NETWORKING = false;

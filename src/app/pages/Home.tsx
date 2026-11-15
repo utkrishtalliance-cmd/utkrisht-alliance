@@ -2,6 +2,7 @@ import { Link } from "react-router";
 import { motion } from "motion/react";
 import { ArrowRight, Globe, Users, TrendingUp, Briefcase } from "lucide-react";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
+import { SHOW_NETWORKING } from "../featureFlags";
 
 // Toggle for the hero's "Explore Our Work" button. Kept OFF until we have real
 // work to showcase as a new business. Flip to `true` to restore the original
@@ -65,7 +66,7 @@ export function Home() {
       image: "/images/networking-events.jpg",
       to: "/networking-events",
     },
-  ];
+  ].filter((e) => SHOW_NETWORKING || e.to !== "/networking-events");
 
   const features = [
     {

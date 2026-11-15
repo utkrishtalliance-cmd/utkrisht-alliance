@@ -4,7 +4,7 @@ import { useRef, useState } from "react";
 import { useSearchParams } from "react-router";
 import { WEB3FORMS_ACCESS_KEY, CONTACT_EMAIL } from "../config";
 import { HCaptchaBox, type HCaptchaHandle } from "../components/HCaptchaBox";
-import { SHOW_PHONE } from "../featureFlags";
+import { SHOW_PHONE, SHOW_NETWORKING } from "../featureFlags";
 
 // Builds a pre-filled mailto: link so a lead is never lost, even when the
 // delivery backend isn't configured yet or a submission fails.
@@ -284,7 +284,9 @@ export function Contact() {
                     <option value="arts-architecture">Arts &amp; Architecture</option>
                     <option value="fashion-shows">Fashion Shows</option>
                     <option value="luxury-real-estate">Luxury Real Estate Exhibitions</option>
-                    <option value="networking-events">Invite-Only Networking Events</option>
+                    {SHOW_NETWORKING && (
+                      <option value="networking-events">Invite-Only Networking Events</option>
+                    )}
                     <option value="brand-showcases">Brand Showcases</option>
                     <option value="whisky-spirits">Whisky &amp; Spirits Salons</option>
                     <option value="beauty-grooming">Beauty &amp; Grooming</option>

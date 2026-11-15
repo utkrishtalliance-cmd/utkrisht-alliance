@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 import { Instagram, Linkedin, Youtube, Mail, MapPin, Phone } from "lucide-react";
-import { SHOW_PHONE } from "../featureFlags";
+import { SHOW_PHONE, SHOW_NETWORKING } from "../featureFlags";
 
 export function Footer() {
   return (
@@ -66,9 +66,11 @@ export function Footer() {
               <Link to="/whisky-spirits" className="text-gray-400 hover:text-white text-sm transition-colors">
                 Whisky &amp; Spirits Salons
               </Link>
-              <Link to="/networking-events" className="text-gray-400 hover:text-white text-sm transition-colors">
-                Invite-Only Networking
-              </Link>
+              {SHOW_NETWORKING && (
+                <Link to="/networking-events" className="text-gray-400 hover:text-white text-sm transition-colors">
+                  Invite-Only Networking
+                </Link>
+              )}
             </div>
           </div>
 

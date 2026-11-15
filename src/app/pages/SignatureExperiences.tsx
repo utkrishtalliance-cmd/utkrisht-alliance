@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import { Link } from "react-router";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
+import { SHOW_NETWORKING } from "../featureFlags";
 
 // Detailed overview of the Signature Experiences — one editorial row per vertical,
 // each linking through to its full segment page. Order matches the home-page grid.
@@ -109,7 +110,7 @@ export function SignatureExperiences() {
       image: "/images/networking-events.jpg",
       to: "/networking-events",
     },
-  ];
+  ].filter((e) => SHOW_NETWORKING || e.to !== "/networking-events");
 
   return (
     <div className="min-h-screen pt-24">
