@@ -263,7 +263,7 @@ export function Partner() {
                 className={`p-8 border flex flex-col ${
                   index === 0
                     ? "border-white bg-[#141B2B]"
-                    : "border-zinc-800 hover:border-zinc-600 transition-colors"
+                    : "border-zinc-800 hover:border-[#c7a468] transition-colors"
                 }`}
               >
                 <h3 className="text-2xl mb-1">{tier.tier}</h3>
@@ -281,7 +281,7 @@ export function Partner() {
                 </div>
                 <Link
                   to="/contact?interest=founding-partnership"
-                  className="mt-8 pt-6 border-t border-zinc-800 inline-flex items-center gap-2 text-sm uppercase tracking-wider hover:text-gray-300 transition-colors"
+                  className="mt-8 pt-6 border-t border-zinc-800 inline-flex items-center gap-2 text-sm uppercase tracking-wider hover:text-[#c7a468] transition-colors"
                 >
                   Request the rate card
                   <ArrowRight size={14} />
@@ -336,7 +336,7 @@ export function Partner() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="p-8 border border-zinc-800 hover:border-zinc-600 transition-colors"
+                className="p-8 border border-zinc-800 hover:border-[#c7a468] transition-colors"
               >
                 <h3 className="text-xl mb-2">{option.title}</h3>
                 <p className="text-gray-500 text-sm uppercase tracking-wider mb-6">
@@ -436,14 +436,14 @@ export function Partner() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact?interest=founding-partnership"
-                className="px-12 py-5 bg-white text-black hover:bg-gray-200 transition-colors text-sm uppercase tracking-wider inline-flex items-center justify-center gap-2"
+                className="px-12 py-5 bg-white text-black hover:bg-[#c7a468] transition-colors text-sm uppercase tracking-wider inline-flex items-center justify-center gap-2"
               >
                 Partnership enquiry
                 <ArrowRight size={16} />
               </Link>
               <Link
                 to="/contact?interest=exhibiting"
-                className="px-12 py-5 border border-white text-white hover:bg-white hover:text-black transition-colors text-sm uppercase tracking-wider inline-flex items-center justify-center"
+                className="px-12 py-5 border border-white text-white hover:bg-[#c7a468] hover:border-[#c7a468] hover:text-black transition-colors text-sm uppercase tracking-wider inline-flex items-center justify-center"
               >
                 Exhibitor enquiry
               </Link>

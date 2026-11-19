@@ -152,7 +152,7 @@ export function Terms() {
                 Questions about these terms? Email us at{" "}
                 <a
                   href="mailto:info@utkrishtalliance.com"
-                  className="underline hover:text-white"
+                  className="underline hover:text-[#c7a468]"
                 >
                   info@utkrishtalliance.com
                 </a>

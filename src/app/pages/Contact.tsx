@@ -346,7 +346,7 @@ export function Contact() {
                 <button
                   type="submit"
                   disabled={status === "submitting"}
-                  className="w-full px-8 py-4 bg-white text-black hover:bg-gray-200 transition-colors text-sm uppercase tracking-wider inline-flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
+                  className="w-full px-8 py-4 bg-white text-black hover:bg-[#c7a468] transition-colors text-sm uppercase tracking-wider inline-flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
                 >
                   {status === "submitting" ? "Sending..." : "Send Message"}
                   <Send size={16} />
@@ -367,7 +367,7 @@ export function Contact() {
                     doesn't open, email us directly at{" "}
                     <a
                       href={`mailto:${CONTACT_EMAIL}`}
-                      className="underline hover:text-white"
+                      className="underline hover:text-[#c7a468]"
                     >
                       {CONTACT_EMAIL}
                     </a>
@@ -427,14 +427,14 @@ export function Contact() {
                       <h3 className="text-lg mb-2">Email</h3>
                       <a
                         href="mailto:info@utkrishtalliance.com"
-                        className="text-gray-400 hover:text-white transition-colors"
+                        className="text-gray-400 hover:text-[#c7a468] transition-colors"
                       >
                         info@utkrishtalliance.com
                       </a>
                       <br />
                       <a
                         href="mailto:partnerships@utkrishtalliance.com"
-                        className="text-gray-400 hover:text-white transition-colors"
+                        className="text-gray-400 hover:text-[#c7a468] transition-colors"
                       >
                         partnerships@utkrishtalliance.com
                       </a>
@@ -450,7 +450,7 @@ export function Contact() {
                       <h3 className="text-lg mb-2">Phone</h3>
                       <a
                         href="tel:+16399160639"
-                        className="text-gray-400 hover:text-white transition-colors"
+                        className="text-gray-400 hover:text-[#c7a468] transition-colors"
                       >
                         +1 (639) 916-0639
                       </a>

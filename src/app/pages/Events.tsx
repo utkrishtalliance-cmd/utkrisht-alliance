@@ -206,7 +206,7 @@ export function Events() {
           {upcomingEvents.length === 0 && (
             <p className="text-gray-400 text-lg">
               Our next season is being finalised.{" "}
-              <Link to="/contact" className="underline hover:text-white">
+              <Link to="/contact" className="underline hover:text-[#c7a468]">
                 Register your interest
               </Link>{" "}
               and we'll let you know as soon as dates are confirmed.
@@ -257,7 +257,7 @@ export function Events() {
 
                   <Link
                     to="/contact"
-                    className="inline-flex items-center gap-2 px-8 py-3 bg-white text-black hover:bg-gray-200 transition-colors text-sm uppercase tracking-wider"
+                    className="inline-flex items-center gap-2 px-8 py-3 bg-white text-black hover:bg-[#c7a468] transition-colors text-sm uppercase tracking-wider"
                   >
                     Register Interest
                     <ArrowRight size={16} />
@@ -351,7 +351,7 @@ export function Events() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center p-8 border border-zinc-800 hover:border-zinc-600 transition-colors"
+                className="text-center p-8 border border-zinc-800 hover:border-[#c7a468] transition-colors"
               >
                 <h3 className="text-xl mb-3">{property.name}</h3>
                 <p className="text-gray-400 text-sm">{property.description}</p>
@@ -379,7 +379,7 @@ export function Events() {
             </p>
             <Link
               to="/partner"
-              className="px-12 py-5 bg-white text-black hover:bg-gray-200 transition-colors text-sm uppercase tracking-wider inline-flex items-center gap-2"
+              className="px-12 py-5 bg-white text-black hover:bg-[#c7a468] transition-colors text-sm uppercase tracking-wider inline-flex items-center gap-2"
             >
               Explore Opportunities
               <ArrowRight size={16} />

@@ -20,7 +20,7 @@ export function InsightArticle() {
           <div className="max-w-3xl mx-auto">
             <Link
               to="/insights"
-              className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors mb-10"
+              className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-[#c7a468] transition-colors mb-10"
             >
               <ArrowLeft size={16} />
               Back to Insights
@@ -80,7 +80,7 @@ export function InsightArticle() {
               </p>
               <Link
                 to="/partner"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-white text-black hover:bg-gray-200 transition-colors text-sm uppercase tracking-wider"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-white text-black hover:bg-[#c7a468] transition-colors text-sm uppercase tracking-wider"
               >
                 Partner With Us
               </Link>

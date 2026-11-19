@@ -149,14 +149,14 @@ export function Home() {
               <>
                 <Link
                   to="/media"
-                  className="px-8 py-4 bg-white text-black hover:bg-gray-200 transition-colors text-sm uppercase tracking-wider inline-flex items-center justify-center gap-2"
+                  className="px-8 py-4 bg-white text-black hover:bg-[#c7a468] transition-colors text-sm uppercase tracking-wider inline-flex items-center justify-center gap-2"
                 >
                   Explore Our Work
                   <ArrowRight size={16} />
                 </Link>
                 <Link
                   to="/partner"
-                  className="px-8 py-4 border border-white text-white hover:bg-white hover:text-black transition-colors text-sm uppercase tracking-wider inline-flex items-center justify-center"
+                  className="px-8 py-4 border border-white text-white hover:bg-[#c7a468] hover:border-[#c7a468] hover:text-black transition-colors text-sm uppercase tracking-wider inline-flex items-center justify-center"
                 >
                   Partner With Us
                 </Link>
@@ -164,7 +164,7 @@ export function Home() {
             ) : (
               <Link
                 to="/partner"
-                className="px-8 py-4 bg-white text-black hover:bg-gray-200 transition-colors text-sm uppercase tracking-wider inline-flex items-center justify-center gap-2"
+                className="px-8 py-4 bg-white text-black hover:bg-[#c7a468] transition-colors text-sm uppercase tracking-wider inline-flex items-center justify-center gap-2"
               >
                 Partner With Us
                 <ArrowRight size={16} />
@@ -391,7 +391,7 @@ export function Home() {
             </p>
             <Link
               to="/partner"
-              className="px-12 py-5 bg-white text-black hover:bg-gray-200 transition-colors text-sm uppercase tracking-wider inline-flex items-center gap-2"
+              className="px-12 py-5 bg-white text-black hover:bg-[#c7a468] transition-colors text-sm uppercase tracking-wider inline-flex items-center gap-2"
             >
               Become a Founding Partner
               <ArrowRight size={16} />

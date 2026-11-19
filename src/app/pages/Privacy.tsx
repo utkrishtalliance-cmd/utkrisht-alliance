@@ -94,7 +94,7 @@ export function Privacy() {
                 may withdraw your consent at any time by emailing us at{" "}
                 <a
                   href="mailto:info@utkrishtalliance.com"
-                  className="underline hover:text-white"
+                  className="underline hover:text-[#c7a468]"
                 >
                   info@utkrishtalliance.com
                 </a>
@@ -149,7 +149,7 @@ export function Privacy() {
                   href="https://policies.google.com/privacy"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="underline hover:text-white"
+                  className="underline hover:text-[#c7a468]"
                 >
                   Google's privacy policy
                 </a>{" "}
@@ -159,7 +159,7 @@ export function Privacy() {
                   href="https://tools.google.com/dlpage/gaoptout"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="underline hover:text-white"
+                  className="underline hover:text-[#c7a468]"
                 >
                   Google's browser add-on
                 </a>
@@ -195,7 +195,7 @@ export function Privacy() {
                 or to withdraw your consent. To make a request, email us at{" "}
                 <a
                   href="mailto:info@utkrishtalliance.com"
-                  className="underline hover:text-white"
+                  className="underline hover:text-[#c7a468]"
                 >
                   info@utkrishtalliance.com
                 </a>
@@ -230,7 +230,7 @@ export function Privacy() {
                 contact us at{" "}
                 <a
                   href="mailto:info@utkrishtalliance.com"
-                  className="underline hover:text-white"
+                  className="underline hover:text-[#c7a468]"
                 >
                   info@utkrishtalliance.com
                 </a>

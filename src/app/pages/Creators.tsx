@@ -401,7 +401,7 @@ export function Creators() {
                 <button
                   type="submit"
                   disabled={status === "submitting"}
-                  className="w-full px-8 py-4 bg-white text-black hover:bg-gray-200 transition-colors text-sm uppercase tracking-wider inline-flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
+                  className="w-full px-8 py-4 bg-white text-black hover:bg-[#c7a468] transition-colors text-sm uppercase tracking-wider inline-flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
                 >
                   {status === "submitting" ? "Submitting..." : "Apply to Join"}
                   <Send size={16} />
@@ -422,7 +422,7 @@ export function Creators() {
                     it doesn't open, email us at{" "}
                     <a
                       href={`mailto:${CONTACT_EMAIL}`}
-                      className="underline hover:text-white"
+                      className="underline hover:text-[#c7a468]"
                     >
                       {CONTACT_EMAIL}
                     </a>

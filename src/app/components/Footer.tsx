@@ -23,22 +23,22 @@ export function Footer() {
           <div>
             <h4 className="text-sm uppercase tracking-wider mb-4">Quick Links</h4>
             <div className="flex flex-col gap-3">
-              <Link to="/about" className="text-gray-400 hover:text-white text-sm transition-colors">
+              <Link to="/about" className="text-gray-400 hover:text-[#c7a468] text-sm transition-colors">
                 About Us
               </Link>
-              <Link to="/services" className="text-gray-400 hover:text-white text-sm transition-colors">
+              <Link to="/services" className="text-gray-400 hover:text-[#c7a468] text-sm transition-colors">
                 Services
               </Link>
-              <Link to="/events" className="text-gray-400 hover:text-white text-sm transition-colors">
+              <Link to="/events" className="text-gray-400 hover:text-[#c7a468] text-sm transition-colors">
                 Events
               </Link>
-              <Link to="/partner" className="text-gray-400 hover:text-white text-sm transition-colors">
+              <Link to="/partner" className="text-gray-400 hover:text-[#c7a468] text-sm transition-colors">
                 Partner With Us
               </Link>
-              <Link to="/insights" className="text-gray-400 hover:text-white text-sm transition-colors">
+              <Link to="/insights" className="text-gray-400 hover:text-[#c7a468] text-sm transition-colors">
                 Insights
               </Link>
-              <Link to="/creators" className="text-gray-400 hover:text-white text-sm transition-colors">
+              <Link to="/creators" className="text-gray-400 hover:text-[#c7a468] text-sm transition-colors">
                 Creators
               </Link>
             </div>
@@ -48,26 +48,26 @@ export function Footer() {
           <div>
             <h4 className="text-sm uppercase tracking-wider mb-4">Signature Experiences</h4>
             <div className="flex flex-col gap-3">
-              <Link to="/brand-showcases" className="text-gray-400 hover:text-white text-sm transition-colors">
+              <Link to="/brand-showcases" className="text-gray-400 hover:text-[#c7a468] text-sm transition-colors">
                 Brand Showcases
               </Link>
-              <Link to="/fashion-shows" className="text-gray-400 hover:text-white text-sm transition-colors">
+              <Link to="/fashion-shows" className="text-gray-400 hover:text-[#c7a468] text-sm transition-colors">
                 Fashion Shows
               </Link>
-              <Link to="/beauty-grooming" className="text-gray-400 hover:text-white text-sm transition-colors">
+              <Link to="/beauty-grooming" className="text-gray-400 hover:text-[#c7a468] text-sm transition-colors">
                 Beauty &amp; Grooming
               </Link>
-              <Link to="/arts-architecture" className="text-gray-400 hover:text-white text-sm transition-colors">
+              <Link to="/arts-architecture" className="text-gray-400 hover:text-[#c7a468] text-sm transition-colors">
                 Arts &amp; Architecture
               </Link>
-              <Link to="/luxury-real-estate" className="text-gray-400 hover:text-white text-sm transition-colors">
+              <Link to="/luxury-real-estate" className="text-gray-400 hover:text-[#c7a468] text-sm transition-colors">
                 Luxury Real Estate
               </Link>
-              <Link to="/whisky-spirits" className="text-gray-400 hover:text-white text-sm transition-colors">
+              <Link to="/whisky-spirits" className="text-gray-400 hover:text-[#c7a468] text-sm transition-colors">
                 Whisky &amp; Spirits Salons
               </Link>
               {SHOW_NETWORKING && (
-                <Link to="/networking-events" className="text-gray-400 hover:text-white text-sm transition-colors">
+                <Link to="/networking-events" className="text-gray-400 hover:text-[#c7a468] text-sm transition-colors">
                   Invite-Only Networking
                 </Link>
               )}
@@ -90,10 +90,10 @@ export function Footer() {
               <div className="flex items-start gap-2 text-gray-400 text-sm">
                 <Mail size={16} className="mt-1 flex-shrink-0" />
                 <span className="flex flex-col">
-                  <a href="mailto:info@utkrishtalliance.com" className="hover:text-white transition-colors">
+                  <a href="mailto:info@utkrishtalliance.com" className="hover:text-[#c7a468] transition-colors">
                     info@utkrishtalliance.com
                   </a>
-                  <a href="mailto:partnerships@utkrishtalliance.com" className="hover:text-white transition-colors">
+                  <a href="mailto:partnerships@utkrishtalliance.com" className="hover:text-[#c7a468] transition-colors">
                     partnerships@utkrishtalliance.com
                   </a>
                 </span>
@@ -102,7 +102,7 @@ export function Footer() {
                 <div className="flex items-start gap-2 text-gray-400 text-sm">
                   <Phone size={16} className="mt-1 flex-shrink-0" />
                   <span>
-                    <a href="tel:+16399160639" className="hover:text-white transition-colors">
+                    <a href="tel:+16399160639" className="hover:text-[#c7a468] transition-colors">
                       +1 (639) 916-0639
                     </a>
                     <span className="block text-gray-500 text-xs mt-1">
@@ -120,10 +120,10 @@ export function Footer() {
             <p>© {new Date().getFullYear()} Utkrisht Alliance. All rights reserved.</p>
             <span className="hidden sm:inline text-zinc-700">·</span>
             <div className="flex gap-4">
-              <Link to="/privacy" className="hover:text-white transition-colors">
+              <Link to="/privacy" className="hover:text-[#c7a468] transition-colors">
                 Privacy Policy
               </Link>
-              <Link to="/terms" className="hover:text-white transition-colors">
+              <Link to="/terms" className="hover:text-[#c7a468] transition-colors">
                 Terms
               </Link>
             </div>
@@ -134,7 +134,7 @@ export function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Utkrisht Alliance on Instagram"
-              className="text-gray-400 hover:text-white transition-colors"
+              className="text-gray-400 hover:text-[#c7a468] transition-colors"
             >
               <Instagram size={20} />
             </a>
@@ -143,7 +143,7 @@ export function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Utkrisht Alliance on LinkedIn"
-              className="text-gray-400 hover:text-white transition-colors"
+              className="text-gray-400 hover:text-[#c7a468] transition-colors"
             >
               <Linkedin size={20} />
             </a>
@@ -152,14 +152,14 @@ export function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Utkrisht Alliance on YouTube"
-              className="text-gray-400 hover:text-white transition-colors"
+              className="text-gray-400 hover:text-[#c7a468] transition-colors"
             >
               <Youtube size={20} />
             </a>
             <a
               href="mailto:info@utkrishtalliance.com"
               aria-label="Email Utkrisht Alliance"
-              className="text-gray-400 hover:text-white transition-colors"
+              className="text-gray-400 hover:text-[#c7a468] transition-colors"
             >
               <Mail size={20} />
             </a>

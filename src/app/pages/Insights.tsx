@@ -133,7 +133,7 @@ export function Insights() {
 
                 <Link
                   to={`/insights/${featured.slug}`}
-                  className="inline-flex items-center gap-2 px-8 py-3 bg-white text-black hover:bg-gray-200 transition-colors text-sm uppercase tracking-wider"
+                  className="inline-flex items-center gap-2 px-8 py-3 bg-white text-black hover:bg-[#c7a468] transition-colors text-sm uppercase tracking-wider"
                 >
                   Read Article
                   <ArrowRight size={16} />
@@ -171,7 +171,7 @@ export function Insights() {
                       {article.category}
                     </div>
 
-                    <h3 className="text-2xl mb-4 group-hover:text-gray-300 transition-colors">
+                    <h3 className="text-2xl mb-4 group-hover:text-[#c7a468] transition-colors">
                       {article.title}
                     </h3>
 
@@ -229,7 +229,7 @@ export function Insights() {
               <button
                 type="submit"
                 disabled={subStatus === "submitting"}
-                className="px-8 py-4 bg-white text-black hover:bg-gray-200 transition-colors text-sm uppercase tracking-wider disabled:opacity-60 disabled:cursor-not-allowed"
+                className="px-8 py-4 bg-white text-black hover:bg-[#c7a468] transition-colors text-sm uppercase tracking-wider disabled:opacity-60 disabled:cursor-not-allowed"
               >
                 {subStatus === "submitting" ? "Subscribing..." : "Subscribe"}
               </button>

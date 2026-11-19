@@ -163,7 +163,7 @@ export function SignatureExperiences() {
                   </ul>
                   <Link
                     to={exp.to}
-                    className="inline-flex items-center gap-2 text-sm uppercase tracking-wider border-b border-zinc-600 pb-1 hover:text-gray-300 transition-colors"
+                    className="inline-flex items-center gap-2 text-sm uppercase tracking-wider border-b border-zinc-600 pb-1 hover:text-[#c7a468] hover:border-[#c7a468] transition-colors"
                   >
                     Explore {exp.title}
                     <ArrowRight size={14} />
@@ -207,14 +207,14 @@ export function SignatureExperiences() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/partner"
-                className="px-12 py-5 bg-white text-black hover:bg-gray-200 transition-colors text-sm uppercase tracking-wider inline-flex items-center justify-center gap-2"
+                className="px-12 py-5 bg-white text-black hover:bg-[#c7a468] transition-colors text-sm uppercase tracking-wider inline-flex items-center justify-center gap-2"
               >
                 Partner With Us
                 <ArrowRight size={16} />
               </Link>
               <Link
                 to="/contact"
-                className="px-12 py-5 border border-white text-white hover:bg-white hover:text-black transition-colors text-sm uppercase tracking-wider inline-flex items-center justify-center"
+                className="px-12 py-5 border border-white text-white hover:bg-[#c7a468] hover:border-[#c7a468] hover:text-black transition-colors text-sm uppercase tracking-wider inline-flex items-center justify-center"
               >
                 Get In Touch
               </Link>

@@ -168,7 +168,7 @@ function CardGrid({ cards }: { cards: SegmentCard[] }) {
             key={card.title}
             {...fadeUp}
             transition={{ duration: 0.6, delay: index * 0.1 }}
-            className="p-8 border border-zinc-800 hover:border-zinc-600 transition-colors flex flex-col"
+            className="p-8 border border-zinc-800 hover:border-[#c7a468] transition-colors flex flex-col"
           >
             <div className="inline-flex items-center justify-center w-16 h-16 mb-6 border border-zinc-700 rounded-full">
               <Icon size={26} className="text-white" />
@@ -272,7 +272,7 @@ function Section({
           <div className="text-center mt-12">
             <Link
               to={contactHref}
-              className="inline-flex items-center gap-2 text-sm uppercase tracking-wider border-b border-zinc-600 pb-1 hover:text-gray-300 transition-colors"
+              className="inline-flex items-center gap-2 text-sm uppercase tracking-wider border-b border-zinc-600 pb-1 hover:text-[#c7a468] hover:border-[#c7a468] transition-colors"
             >
               {section.ctaLabel}
               <ArrowRight size={14} />
@@ -384,14 +384,14 @@ function Section({
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
             to={contactHref}
-            className="px-12 py-5 bg-white text-black hover:bg-gray-200 transition-colors text-sm uppercase tracking-wider inline-flex items-center justify-center gap-2"
+            className="px-12 py-5 bg-white text-black hover:bg-[#c7a468] transition-colors text-sm uppercase tracking-wider inline-flex items-center justify-center gap-2"
           >
             {section.ctaLabel || "Request an invitation"}
             <ArrowRight size={16} />
           </Link>
           <Link
             to="/partner"
-            className="px-12 py-5 border border-white text-white hover:bg-white hover:text-black transition-colors text-sm uppercase tracking-wider inline-flex items-center justify-center"
+            className="px-12 py-5 border border-white text-white hover:bg-[#c7a468] hover:border-[#c7a468] hover:text-black transition-colors text-sm uppercase tracking-wider inline-flex items-center justify-center"
           >
             {section.secondaryCtaLabel || "Our approach"}
           </Link>
@@ -464,14 +464,14 @@ export function SegmentPage({ content }: { content: SegmentContent }) {
           >
             <Link
               to={contactHref}
-              className="px-12 py-5 bg-white text-black hover:bg-gray-200 transition-colors text-sm uppercase tracking-wider inline-flex items-center justify-center gap-2"
+              className="px-12 py-5 bg-white text-black hover:bg-[#c7a468] transition-colors text-sm uppercase tracking-wider inline-flex items-center justify-center gap-2"
             >
               Request an invitation
               <ArrowRight size={16} />
             </Link>
             <Link
               to="/partner"
-              className="px-12 py-5 border border-white text-white hover:bg-white hover:text-black transition-colors text-sm uppercase tracking-wider inline-flex items-center justify-center"
+              className="px-12 py-5 border border-white text-white hover:bg-[#c7a468] hover:border-[#c7a468] hover:text-black transition-colors text-sm uppercase tracking-wider inline-flex items-center justify-center"
             >
               Our approach
             </Link>

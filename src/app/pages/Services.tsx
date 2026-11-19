@@ -298,7 +298,7 @@ export function Services() {
             </p>
             <Link
               to="/contact"
-              className="px-12 py-5 bg-white text-black hover:bg-gray-200 transition-colors text-sm uppercase tracking-wider inline-flex items-center gap-2"
+              className="px-12 py-5 bg-white text-black hover:bg-[#c7a468] transition-colors text-sm uppercase tracking-wider inline-flex items-center gap-2"
             >
               Get In Touch
               <ArrowRight size={16} />

@@ -92,7 +92,7 @@ export function Navigation() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden text-white text-sm uppercase tracking-wider border border-white/40 px-4 py-2 transition-colors hover:border-white"
+            className="lg:hidden text-white text-sm uppercase tracking-wider border border-white/40 px-4 py-2 transition-colors hover:border-[#c7a468] hover:text-[#c7a468]"
             aria-expanded={isOpen}
           >
             {isOpen ? "Close" : "Menu"}

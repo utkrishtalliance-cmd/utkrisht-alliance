@@ -233,7 +233,7 @@ export function Media() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="flex items-start gap-6 p-8 border border-zinc-800 hover:border-zinc-600 transition-colors group cursor-pointer"
+                className="flex items-start gap-6 p-8 border border-zinc-800 hover:border-[#c7a468] transition-colors group cursor-pointer"
               >
                 <div className="w-12 h-12 bg-[#141B2B] rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-white transition-colors">
                   <FileText size={20} className="text-white group-hover:text-black transition-colors" />
