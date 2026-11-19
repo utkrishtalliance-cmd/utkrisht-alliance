@@ -95,7 +95,7 @@ export function Home() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative min-h-screen flex justify-center [align-items:safe_center] overflow-hidden pt-32 pb-16">
-        <div className="absolute inset-0 bg-gradient-to-b from-black via-black/80 to-black z-10" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0A0F1A] via-[#0A0F1A]/80 to-[#0A0F1A] z-10" />
         <div className="absolute inset-0">
           <ImageWithFallback
             src="/images/photo-1773745060497-4cc1df774c72.jpg"
@@ -189,7 +189,7 @@ export function Home() {
       </section>
 
       {/* Signature Experiences */}
-      <section className="py-24 bg-zinc-950">
+      <section className="py-24 bg-[#0A0F1A]">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -227,7 +227,7 @@ export function Home() {
                   alt={exp.title}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0A0F1A] via-[#0A0F1A]/50 to-transparent" />
                 {exp.to && (
                   <Link
                     to={exp.to}
@@ -292,7 +292,7 @@ export function Home() {
       </section>
 
       {/* Why Utkrisht Alliance */}
-      <section className="py-24 bg-zinc-950">
+      <section className="py-24 bg-[#0A0F1A]">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -366,7 +366,7 @@ export function Home() {
       </section>
 
       {/* Founding Season — closing invitation */}
-      <section className="py-28 bg-zinc-950">
+      <section className="py-28 bg-[#0A0F1A]">
         <div className="container mx-auto px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

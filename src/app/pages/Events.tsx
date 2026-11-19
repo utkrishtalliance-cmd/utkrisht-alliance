@@ -170,7 +170,7 @@ export function Events() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(eventsJsonLd) }}
       />
       {/* Hero Section */}
-      <section className="py-24 bg-zinc-950">
+      <section className="py-24 bg-[#0A0F1A]">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -272,7 +272,7 @@ export function Events() {
       {/* Past Events — shelved until we have events to showcase as a new
           business. Flip SHOW_PAST_EVENTS (top of file) to true to restore it. */}
       {SHOW_PAST_EVENTS && (
-      <section className="py-24 bg-zinc-950">
+      <section className="py-24 bg-[#0A0F1A]">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -302,7 +302,7 @@ export function Events() {
                   alt={event.title}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0A0F1A] via-[#0A0F1A]/60 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-8">
                   <p className="text-sm text-gray-400 mb-2">{event.date}</p>
                   <h3 className="text-2xl mb-3">{event.title}</h3>
@@ -362,7 +362,7 @@ export function Events() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-zinc-950">
+      <section className="py-24 bg-[#0A0F1A]">
         <div className="container mx-auto px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

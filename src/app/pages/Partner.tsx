@@ -155,7 +155,7 @@ export function Partner() {
   return (
     <div className="min-h-screen pt-24">
       {/* Hero */}
-      <section className="py-24 bg-zinc-950">
+      <section className="py-24 bg-[#0A0F1A]">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -231,7 +231,7 @@ export function Partner() {
       </section>
 
       {/* Founding positions */}
-      <section className="py-24 bg-zinc-950">
+      <section className="py-24 bg-[#0A0F1A]">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -262,7 +262,7 @@ export function Partner() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`p-8 border flex flex-col ${
                   index === 0
-                    ? "border-white bg-zinc-900"
+                    ? "border-white bg-[#141B2B]"
                     : "border-zinc-800 hover:border-zinc-600 transition-colors"
                 }`}
               >
@@ -382,7 +382,7 @@ export function Partner() {
       </section>
 
       {/* What we commit to */}
-      <section className="py-24 bg-zinc-950">
+      <section className="py-24 bg-[#0A0F1A]">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

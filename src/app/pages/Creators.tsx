@@ -164,7 +164,7 @@ export function Creators() {
   return (
     <div className="min-h-screen pt-24">
       {/* Hero */}
-      <section className="py-24 bg-zinc-950">
+      <section className="py-24 bg-[#0A0F1A]">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -213,7 +213,7 @@ export function Creators() {
       </section>
 
       {/* Application form */}
-      <section className="py-24 bg-zinc-950">
+      <section className="py-24 bg-[#0A0F1A]">
         <div className="container mx-auto px-6">
           <div className="max-w-2xl mx-auto">
             <motion.div
@@ -272,7 +272,7 @@ export function Creators() {
                       value={formData.platform}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-black border border-zinc-700 focus:border-white outline-none transition-colors"
+                      className="w-full px-4 py-3 bg-[#0A0F1A] border border-zinc-700 focus:border-white outline-none transition-colors"
                     >
                       <option value="">Select</option>
                       <option value="instagram">Instagram</option>
@@ -311,7 +311,7 @@ export function Creators() {
                       value={formData.audience}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-black border border-zinc-700 focus:border-white outline-none transition-colors"
+                      className="w-full px-4 py-3 bg-[#0A0F1A] border border-zinc-700 focus:border-white outline-none transition-colors"
                     >
                       <option value="">Select</option>
                       <option value="under-10k">Under 10K</option>
@@ -331,7 +331,7 @@ export function Creators() {
                       value={formData.niche}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-black border border-zinc-700 focus:border-white outline-none transition-colors"
+                      className="w-full px-4 py-3 bg-[#0A0F1A] border border-zinc-700 focus:border-white outline-none transition-colors"
                     >
                       <option value="">Select</option>
                       <option value="fashion-style">Fashion & Style</option>

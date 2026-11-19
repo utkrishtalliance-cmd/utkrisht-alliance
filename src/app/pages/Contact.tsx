@@ -178,7 +178,7 @@ export function Contact() {
   return (
     <div className="min-h-screen pt-24">
       {/* Hero Section */}
-      <section className="py-24 bg-zinc-950">
+      <section className="py-24 bg-[#0A0F1A]">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -276,7 +276,7 @@ export function Contact() {
                     value={formData.interest}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-black border border-zinc-700 focus:border-white outline-none transition-colors"
+                    className="w-full px-4 py-3 bg-[#0A0F1A] border border-zinc-700 focus:border-white outline-none transition-colors"
                   >
                     <option value="">Select an option</option>
                     <option value="founding-partnership">Founding Partnership / Sponsorship</option>
@@ -390,7 +390,7 @@ export function Contact() {
                 
                 <div className="space-y-8">
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-zinc-900 rounded-full flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 bg-[#141B2B] rounded-full flex items-center justify-center flex-shrink-0">
                       <MapPin size={20} className="text-white" />
                     </div>
                     <div>
@@ -406,7 +406,7 @@ export function Contact() {
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-zinc-900 rounded-full flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 bg-[#141B2B] rounded-full flex items-center justify-center flex-shrink-0">
                       <MapPin size={20} className="text-white" />
                     </div>
                     <div>
@@ -420,7 +420,7 @@ export function Contact() {
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-zinc-900 rounded-full flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 bg-[#141B2B] rounded-full flex items-center justify-center flex-shrink-0">
                       <Mail size={20} className="text-white" />
                     </div>
                     <div>
@@ -443,7 +443,7 @@ export function Contact() {
 
                   {SHOW_PHONE && (
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-zinc-900 rounded-full flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 bg-[#141B2B] rounded-full flex items-center justify-center flex-shrink-0">
                       <Phone size={20} className="text-white" />
                     </div>
                     <div>

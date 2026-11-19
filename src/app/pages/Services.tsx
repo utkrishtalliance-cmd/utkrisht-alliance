@@ -68,7 +68,7 @@ export function Services() {
         "Curated guest list and on-brand hospitality",
         "Launch-day production, capture & social rollout",
       ],
-      image: "/images/photo-1773745060497-4cc1df774c72.jpg",
+      image: "/images/photo-1505373877841-8d25f7d46678.jpg",
     },
     {
       icon: Building2,
@@ -162,7 +162,7 @@ export function Services() {
   return (
     <div className="min-h-screen pt-24">
       {/* Hero Section */}
-      <section className="py-24 bg-zinc-950">
+      <section className="py-24 bg-[#0A0F1A]">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -226,7 +226,7 @@ export function Services() {
       </section>
 
       {/* Process Section */}
-      <section className="py-24 bg-zinc-950">
+      <section className="py-24 bg-[#0A0F1A]">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

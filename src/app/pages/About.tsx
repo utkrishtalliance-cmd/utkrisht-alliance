@@ -6,7 +6,7 @@ export function About() {
   return (
     <div className="min-h-screen pt-24">
       {/* Hero Section */}
-      <section className="py-24 bg-zinc-950">
+      <section className="py-24 bg-[#0A0F1A]">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -85,7 +85,7 @@ export function About() {
       </section>
 
       {/* What Sets Us Apart */}
-      <section className="py-24 bg-zinc-950">
+      <section className="py-24 bg-[#0A0F1A]">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -157,13 +157,14 @@ export function About() {
               <div className="space-y-6 text-gray-300 text-lg leading-relaxed">
                 <p>
                   Founded with a vision to bridge the gap between luxury brands and
-                  discerning audiences, Utkrisht Alliance has established itself as
-                  a trusted partner in the premium events and media landscape.
+                  discerning audiences, Utkrisht Alliance is a new media and events
+                  house, built to be a trusted partner in the premium events and
+                  media landscape.
                 </p>
                 <p>
-                  Operating from our headquarters in Canada, we've expanded our reach
-                  to serve clients globally, creating experiences that resonate across
-                  cultures and markets. Our expertise spans fashion shows, real estate
+                  Operating from our headquarters in Canada, we're built to work with
+                  clients globally, creating experiences designed to resonate across
+                  cultures and markets. Our focus spans fashion shows, real estate
                   exhibitions, exclusive networking events, and comprehensive media
                   production.
                 </p>

@@ -11,7 +11,7 @@ const LAST_UPDATED = "September 4, 2026";
 export function Privacy() {
   return (
     <div className="min-h-screen pt-24">
-      <section className="py-24 bg-zinc-950">
+      <section className="py-24 bg-[#0A0F1A]">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

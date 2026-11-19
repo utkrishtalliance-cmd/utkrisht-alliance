@@ -84,7 +84,7 @@ export function Media() {
   return (
     <div className="min-h-screen pt-24">
       {/* Hero Section */}
-      <section className="py-24 bg-zinc-950">
+      <section className="py-24 bg-[#0A0F1A]">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -119,7 +119,7 @@ export function Media() {
                   alt={item.title}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0A0F1A] via-[#0A0F1A]/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 
                 {/* Type Icon */}
                 <div className="absolute top-4 right-4 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -142,7 +142,7 @@ export function Media() {
       </section>
 
       {/* Video Showcase */}
-      <section className="py-24 bg-zinc-950">
+      <section className="py-24 bg-[#0A0F1A]">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -163,14 +163,14 @@ export function Media() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="relative aspect-video bg-zinc-900 group cursor-pointer overflow-hidden"
+              className="relative aspect-video bg-[#141B2B] group cursor-pointer overflow-hidden"
             >
               <ImageWithFallback
                 src="/images/photo-1768913640595-104e0170dfee.jpg"
                 alt="Featured video"
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+              <div className="absolute inset-0 bg-[#0A0F1A]/40 flex items-center justify-center">
                 <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
                   <Play size={32} className="text-black ml-1" />
                 </div>
@@ -186,14 +186,14 @@ export function Media() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="relative aspect-video bg-zinc-900 group cursor-pointer overflow-hidden"
+              className="relative aspect-video bg-[#141B2B] group cursor-pointer overflow-hidden"
             >
               <ImageWithFallback
                 src="/images/photo-1764068866740-506ba4cf64e4.jpg"
                 alt="Featured video"
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+              <div className="absolute inset-0 bg-[#0A0F1A]/40 flex items-center justify-center">
                 <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
                   <Play size={32} className="text-black ml-1" />
                 </div>
@@ -235,7 +235,7 @@ export function Media() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="flex items-start gap-6 p-8 border border-zinc-800 hover:border-zinc-600 transition-colors group cursor-pointer"
               >
-                <div className="w-12 h-12 bg-zinc-900 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-white transition-colors">
+                <div className="w-12 h-12 bg-[#141B2B] rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-white transition-colors">
                   <FileText size={20} className="text-white group-hover:text-black transition-colors" />
                 </div>
                 <div className="flex-1">
@@ -251,7 +251,7 @@ export function Media() {
       )}
 
       {/* Stats Section */}
-      <section className="py-24 bg-zinc-950">
+      <section className="py-24 bg-[#0A0F1A]">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
             {[

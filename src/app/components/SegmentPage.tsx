@@ -209,7 +209,7 @@ function Section({
 }) {
   const zinc = index % 2 === 1;
   const pad = section.kind === "note" ? "py-16" : "py-24";
-  const bg = zinc ? " bg-zinc-950" : "";
+  const bg = zinc ? " bg-[#0A0F1A]" : "";
 
   let inner: React.ReactNode = null;
 
@@ -414,7 +414,7 @@ export function SegmentPage({ content }: { content: SegmentContent }) {
     <div className="min-h-screen">
       {/* Hero — the card's photograph anchors the page */}
       <section className="relative min-h-screen flex justify-center [align-items:safe_center] overflow-hidden pt-32 pb-16">
-        <div className="absolute inset-0 bg-gradient-to-b from-black via-black/80 to-black z-10" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0A0F1A] via-[#0A0F1A]/80 to-[#0A0F1A] z-10" />
         <div className="absolute inset-0">
           <ImageWithFallback
             src={content.heroImage}

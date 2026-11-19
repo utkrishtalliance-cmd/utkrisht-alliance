@@ -69,7 +69,7 @@ export function Insights() {
   return (
     <div className="min-h-screen pt-24">
       {/* Hero Section */}
-      <section className="py-24 bg-zinc-950">
+      <section className="py-24 bg-[#0A0F1A]">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -146,7 +146,7 @@ export function Insights() {
 
       {/* Articles Grid */}
       {rest.length > 0 && (
-        <section className="py-24 bg-zinc-950">
+        <section className="py-24 bg-[#0A0F1A]">
           <div className="container mx-auto px-6">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {rest.map((article, index) => (

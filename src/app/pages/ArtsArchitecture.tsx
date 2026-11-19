@@ -183,7 +183,7 @@ export function ArtsArchitecture() {
     <div className="min-h-screen">
       {/* Hero — the one permitted photograph anchors the page */}
       <section className="relative min-h-screen flex justify-center [align-items:safe_center] overflow-hidden pt-32 pb-16">
-        <div className="absolute inset-0 bg-gradient-to-b from-black via-black/80 to-black z-10" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0A0F1A] via-[#0A0F1A]/80 to-[#0A0F1A] z-10" />
         <div className="absolute inset-0">
           <ImageWithFallback
             src="/images/arts-architecture.jpg"
@@ -285,7 +285,7 @@ export function ArtsArchitecture() {
       </section>
 
       {/* Who We're Inviting */}
-      <section className="py-24 bg-zinc-950">
+      <section className="py-24 bg-[#0A0F1A]">
         <div className="container mx-auto px-6">
           <SectionHeading
             eyebrow="Who We're Inviting"
@@ -382,7 +382,7 @@ export function ArtsArchitecture() {
       </section>
 
       {/* The Showcase */}
-      <section className="py-24 bg-zinc-950">
+      <section className="py-24 bg-[#0A0F1A]">
         <div className="container mx-auto px-6">
           <SectionHeading
             eyebrow="The Showcase"
@@ -477,7 +477,7 @@ export function ArtsArchitecture() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 bg-zinc-950">
+      <section className="py-24 bg-[#0A0F1A]">
         <div className="container mx-auto px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router";
-import { useState, useEffect } from "react";
+import { useState, useEffect, Fragment } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { SHOW_MEDIA_PAGE } from "../featureFlags";
 
@@ -50,9 +50,9 @@ export function Navigation() {
         isOpen ? "" : "transition-all duration-300"
       } ${
         isOpen
-          ? "bg-black py-6 bottom-0 overflow-y-auto"
+          ? "bg-[#0A0F1A] py-6 bottom-0 overflow-y-auto"
           : scrolled
-            ? "bg-black/90 backdrop-blur-lg py-4"
+            ? "bg-[#0A0F1A]/90 backdrop-blur-lg py-4"
             : "bg-transparent py-6"
       }`}
     >
@@ -60,26 +60,32 @@ export function Navigation() {
         <div className="flex items-center justify-between">
           <Link to="/" aria-label="Utkrisht Alliance — home" className="inline-flex items-center">
             <img
-              src="/utkrisht-logo-wide.webp"
+              src="/utkrisht-logo-wide.png"
               alt="Utkrisht Alliance"
-              className="h-12 md:h-14 w-auto"
+              className="h-12 md:h-14 lg:h-[5.25rem] w-auto"
             />
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.to}
-                to={link.to}
-                className={`text-sm uppercase tracking-wider transition-colors hover:text-white ${
-                  location.pathname === link.to
-                    ? "text-white"
-                    : "text-gray-400"
-                }`}
-              >
-                {link.label}
-              </Link>
+          <div className="hidden lg:flex items-center gap-3 xl:gap-5">
+            {navLinks.map((link, i) => (
+              <Fragment key={link.to}>
+                {i > 0 && (
+                  <span aria-hidden="true" className="select-none text-[#c7a468]/50">
+                    /
+                  </span>
+                )}
+                <Link
+                  to={link.to}
+                  className={`whitespace-nowrap text-sm uppercase tracking-wider transition-colors hover:text-[#c7a468] ${
+                    location.pathname === link.to
+                      ? "text-[#c7a468]"
+                      : "text-gray-400"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              </Fragment>
             ))}
           </div>
 
@@ -109,9 +115,9 @@ export function Navigation() {
                   <Link
                     key={link.to}
                     to={link.to}
-                    className={`text-sm uppercase tracking-wider transition-colors ${
+                    className={`text-sm uppercase tracking-wider transition-colors hover:text-[#c7a468] ${
                       location.pathname === link.to
-                        ? "text-white"
+                        ? "text-[#c7a468]"
                         : "text-gray-400"
                     }`}
                   >
