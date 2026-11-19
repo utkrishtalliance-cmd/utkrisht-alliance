@@ -272,6 +272,7 @@ export function Home() {
             {[
               "Luxury Brands",
               "Fashion Houses",
+              "Beauty & Grooming",
               "Artists & Galleries",
               "Design & Architecture",
               "Real Estate & Developers",
