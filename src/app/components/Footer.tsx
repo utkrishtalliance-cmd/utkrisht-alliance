@@ -88,6 +88,17 @@ export function Footer() {
                 </span>
               </div>
               <div className="flex items-start gap-2 text-gray-400 text-sm">
+                <MapPin size={16} className="mt-1 flex-shrink-0" />
+                <span>
+                  <span className="block text-gray-500 text-xs uppercase tracking-wider mb-1">
+                    Registered Office
+                  </span>
+                  717 Mohawk Road<br />
+                  Ancaster, ON L9G 2X1<br />
+                  Canada
+                </span>
+              </div>
+              <div className="flex items-start gap-2 text-gray-400 text-sm">
                 <Mail size={16} className="mt-1 flex-shrink-0" />
                 <span className="flex flex-col">
                   <a href="mailto:info@utkrishtalliance.com" className="hover:text-[#c7a468] transition-colors">
