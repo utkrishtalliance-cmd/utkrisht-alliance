@@ -11,6 +11,7 @@ import {
   Share2,
   Award,
   Megaphone,
+  Rocket,
 } from "lucide-react";
 import { Link } from "react-router";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
@@ -36,9 +37,9 @@ export function Services() {
       description: "Unforgettable experiences that captivate and engage",
       features: [
         "High-fashion runway shows",
-        "Luxury lifestyle activations",
+        "Live entertainment & performances",
         "Private VIP networking events",
-        "Product launch experiences",
+        "Cultural & celebration experiences",
       ],
       image: "/images/photo-1579254216656-3c0c16a3bdd6.jpg",
     },
@@ -48,13 +49,26 @@ export function Services() {
       description:
         "End-to-end production of corporate and private events, delivered to a single exacting standard",
       features: [
-        "Product launches & brand activations",
         "Conferences, summits & award galas",
         "Private celebrations & milestone events",
         "Venue, catering & hospitality management",
         "On-site production, from brief to final strike",
       ],
       image: "/images/founding-gala.jpg",
+    },
+    {
+      icon: Rocket,
+      title: "Brand Activations & Product Launches",
+      description:
+        "Launch moments and brand activations designed to make a new product the thing everyone in the room is talking about",
+      features: [
+        "Creative concept & theming for the launch moment",
+        "Immersive pop-ups, installations & branded environments",
+        "Product reveals, live demos & first-look experiences",
+        "Curated guest list and on-brand hospitality",
+        "Launch-day production, capture & social rollout",
+      ],
+      image: "/images/photo-1773745060497-4cc1df774c72.jpg",
     },
     {
       icon: Building2,
